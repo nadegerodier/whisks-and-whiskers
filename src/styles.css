@@ -1,5 +1,29 @@
 :root {
   --branding-color: #e26a6b;
+  --background-color: #303030;
   --primary-color: #1a5183;
   --secondary-color: #ffdc7f;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+.hero {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  color: white;
+  margin: 0 auto;
+  padding: 0 5px 100px 5px;
+}
+
+.hero2 {
+  background-image: url(/images/Pic1.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  min-height: 100vh;
+  padding: 300px 5px;
 }
