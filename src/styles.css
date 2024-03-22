@@ -5,16 +5,12 @@
   --secondary-color: #ffdc7f;
 }
 
-body {
-  background-color: var(--background-color);
-  font-family: "Cormorant Upright", serif;
-}
-
 .navbar {
   padding: 20px 10px;
 }
 
 nav h1 {
+  font-family: "Cormorant Upright", serif;
   font-size: 28px;
   margin: 0;
 }
@@ -24,6 +20,7 @@ nav a,
 .nav-link-active,
 .nav-link:hover {
   color: white;
+  font-family: "Cormorant Upright", serif;
   font-size: 20px;
   margin: 0;
   padding: 0 8px;
@@ -57,4 +54,33 @@ nav a,
   font-weight: 700;
   font-size: 75px;
   padding: 100px 200px;
+}
+
+section {
+  background-color: var(--primary-color);
+  color: white;
+  font-family: "Noto Serif Yezidi", serif;
+  padding: 50px;
+}
+
+section h3 {
+  font-size: 28px;
+  margin: 0;
+}
+
+section p {
+  font-size: 16px;
+  padding: 15px 20px 0 0;
+}
+
+section .btn-branding {
+  background-color: white;
+  border-color: white;
+  color: var(--primary-color);
+  margin: 20px 20px;
+  transition: all 200ms ease-in-out;
+}
+
+section .btn-branding:hover {
+  border-color: white;
 }
