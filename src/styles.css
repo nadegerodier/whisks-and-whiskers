@@ -21,7 +21,7 @@ nav a,
 .nav-link:hover {
   color: white;
   font-family: "Cormorant Upright", serif;
-  font-size: 20px;
+  font-size: 22px;
   margin: 0;
   padding: 0 8px;
   text-decoration: none;
@@ -64,12 +64,12 @@ section {
 }
 
 section h3 {
-  font-size: 28px;
+  font-size: 32px;
   margin: 0;
 }
 
 section p {
-  font-size: 16px;
+  font-size: 20px;
   padding: 15px 20px 0 0;
 }
 
