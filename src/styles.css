@@ -100,20 +100,20 @@ section.testimonials h3 {
   margin: 0;
 }
 
-section .review-grid {
+section .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
 
-section .review-card {
+section .testimonials-card {
   background-color: var(--off-white);
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 20px 40px;
 }
 
-section .review-card img {
+section .testimonials-card img {
   border-radius: 50%;
   width: 40%;
 }
