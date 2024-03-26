@@ -110,7 +110,7 @@ section .testimonials-card {
   background-color: var(--off-white);
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  padding: 20px 40px;
+  padding: 40px;
 }
 
 section .testimonials-card img {
@@ -134,7 +134,11 @@ section .fa-paw {
   padding: 0 4px;
 }
 
+section h6 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 section.testimonials p {
-  font-size: 18px;
-  padding: 15px 20px 0 0;
+  font-size: 16px;
 }
