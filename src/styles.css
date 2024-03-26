@@ -1,8 +1,9 @@
 :root {
-  --background-color: #303030;
   --branding-color: #ffdc7f;
   --secondary-color: #e26a6b;
+  --off-white: #fffdfb;
   --tertiary-color: #1a5183;
+  --text-color: #303030;
 }
 
 .navbar {
@@ -19,7 +20,7 @@ nav a,
 .nav-link,
 .nav-link-active,
 .nav-link:hover {
-  color: white;
+  color: var(--off-white);
   font-family: "Cormorant Upright", serif;
   font-size: 22px;
   margin: 0;
@@ -56,26 +57,26 @@ nav a,
   padding: 100px 200px;
 }
 
-section {
+section.classes {
   background-color: var(--tertiary-color);
-  color: white;
+  color: var(--off-white);
   font-family: "Noto Serif Yezidi", serif;
   padding: 50px;
 }
 
-section h3 {
-  font-size: 32px;
+section.classes h3 {
+  font-size: 40px;
   margin: 0;
 }
 
-section p {
+section.classes p {
   font-size: 20px;
   padding: 15px 20px 0 0;
 }
 
 section .btn-branding {
-  background-color: white;
-  border-color: white;
+  background-color: var(--off-white);
+  border-color: var(--off-white);
   color: var(--tertiary-color);
   font-size: 20px;
   margin: 20px 20px;
@@ -84,5 +85,56 @@ section .btn-branding {
 }
 
 section .btn-branding:hover {
-  border-color: white;
+  border-color: var(--off-white);
+}
+
+section.testimonials {
+  background-color: var(--branding-color);
+  color: var(--text-color);
+  font-family: "Noto Serif Yezidi", serif;
+  padding: 50px;
+}
+
+section.testimonials h3 {
+  font-size: 40px;
+  margin: 0;
+}
+
+section .review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+section .review-card {
+  background-color: var(--off-white);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 20px 40px;
+}
+
+section .review-card img {
+  border-radius: 50%;
+  width: 40%;
+}
+
+section h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+section h5 {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+section .fa-paw {
+  color: #f3c443;
+  font-size: 18px;
+  padding: 0 4px;
+}
+
+section.testimonials p {
+  font-size: 18px;
+  padding: 15px 20px 0 0;
 }
