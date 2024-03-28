@@ -101,7 +101,7 @@ section.testimonials {
   background-color: var(--primary-color);
   color: var(--off-black);
   font-family: "Noto Serif Yezidi", serif;
-  padding: 250px 50px;
+  padding: 50px 50px;
 }
 
 section.testimonials h3 {
@@ -112,12 +112,6 @@ section.testimonials h3 {
 
 section.testimonials .carousel-inner {
   padding: 0 250px 100px;
-}
-
-section .testimonials-grid-old {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
 }
 
 section .testimonials-card {
@@ -150,7 +144,7 @@ section .fa-paw {
   padding: 0 4px;
 }
 
-section h6 {
+section.testimonials h6 {
   font-size: 16px;
   font-weight: bold;
 }
