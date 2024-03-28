@@ -69,7 +69,12 @@ section.classes h3 {
   margin: 0;
 }
 
-section.classes p {
+section.classes h4 {
+  font-size: 32px;
+}
+
+section.classes p,
+li {
   font-size: 20px;
 }
 
@@ -129,12 +134,12 @@ section .testimonials-card img {
   width: 40%;
 }
 
-section h4 {
+section.testimonials h4 {
   font-size: 18px;
   font-weight: bold;
 }
 
-section h5 {
+section.testimonials h5 {
   font-size: 16px;
   opacity: 0.6;
 }
