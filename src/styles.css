@@ -114,7 +114,7 @@ section.testimonials .carousel-inner {
   padding: 0 250px 100px;
 }
 
-section .testimonials-card {
+section.testimonials .testimonials-card {
   background-color: var(--off-white);
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -123,7 +123,17 @@ section .testimonials-card {
   padding: 40px;
 }
 
-section .testimonials-card img {
+section.testimonials .fa-quote {
+  color: lightgray;
+  font-size: 72px;
+  opacity: 0.6;
+}
+
+section.testimonials .fa-quote-right {
+  float: right;
+}
+
+section.testimonials img {
   border-radius: 50%;
   width: 40%;
 }
@@ -144,21 +154,10 @@ section .fa-paw {
   padding: 0 4px;
 }
 
-section.testimonials h6 {
-  font-size: 16px;
-  font-weight: bold;
+section .fa-paw:first-child {
+  padding-left: 0;
 }
 
 section.testimonials p {
   font-size: 16px;
-}
-
-section.testimonials .fa-quote {
-  color: lightgray;
-  font-size: 72px;
-  opacity: 0.6;
-}
-
-section.testimonials .fa-quote-right {
-  float: right;
 }
