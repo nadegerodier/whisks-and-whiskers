@@ -63,8 +63,34 @@ section {
 }
 
 section h3 {
-  font-size: 40px;
+  font-size: 50px;
   margin: 0;
+}
+
+section.about-us {
+  background-color: var(--branding-color);
+  color: var(--off-black);
+}
+
+section.about-us p {
+  font-size: 20px;
+}
+
+section.about-us .btn-branding {
+  background-color: var(--off-black);
+  border-color: var(--off-black);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: var(--branding-color);
+  font-size: 20px;
+  margin: 20px 20px;
+  padding: 8px 20px;
+  transition: all 200ms ease-in-out;
+}
+
+section.about-us .btn-branding:hover {
+  background-color: var(--branding-color);
+  border-color: var(--off-black);
+  color: var(--off-black);
 }
 
 section.classes {
@@ -84,20 +110,6 @@ li {
 section.classes img {
   display: block;
   margin: 0 auto;
-}
-
-section .btn-branding {
-  background-color: var(--off-white);
-  border-color: var(--off-white);
-  color: var(--secondary-color);
-  font-size: 20px;
-  margin: 20px 20px;
-  padding: 8px 20px;
-  transition: all 200ms ease-in-out;
-}
-
-section .btn-branding:hover {
-  border-color: var(--off-white);
 }
 
 section.testimonials {
@@ -146,13 +158,13 @@ section.testimonials h6 {
   opacity: 0.6;
 }
 
-section .fa-paw {
+section.testimonials .fa-paw {
   color: #f3c443;
   font-size: 18px;
   padding: 0 4px;
 }
 
-section .fa-paw:first-child {
+section.testimonials .fa-paw:first-child {
   padding-left: 0;
 }
 
