@@ -154,7 +154,7 @@ section.testimonials p {
 }
 
 section.testimonials .fa-quote {
-  color: var(--primary-color);
+  color: lightgray;
   font-size: 72px;
   opacity: 0.6;
 }
