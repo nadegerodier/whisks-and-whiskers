@@ -57,16 +57,19 @@ nav a,
   padding: 100px 200px;
 }
 
-section.classes {
-  background-color: var(--secondary-color);
-  color: var(--off-white);
+section {
   font-family: "Noto Serif Yezidi", serif;
   padding: 50px;
 }
 
-section.classes h3 {
+section h3 {
   font-size: 40px;
   margin: 0;
+}
+
+section.classes {
+  background-color: var(--secondary-color);
+  color: var(--off-white);
 }
 
 section.classes h4 {
@@ -100,14 +103,10 @@ section .btn-branding:hover {
 section.testimonials {
   background-color: var(--primary-color);
   color: var(--off-black);
-  font-family: "Noto Serif Yezidi", serif;
-  padding: 50px 50px;
 }
 
 section.testimonials h3 {
   color: var(--off-white);
-  font-size: 40px;
-  margin: 0;
 }
 
 section.testimonials .carousel-inner {
@@ -138,12 +137,11 @@ section.testimonials img {
   width: 40%;
 }
 
-section.testimonials h4 {
-  font-size: 18px;
-  font-weight: bold;
+section.testimonials h5 {
+  font-size: 22px;
 }
 
-section.testimonials h5 {
+section.testimonials h6 {
   font-size: 16px;
   opacity: 0.6;
 }
