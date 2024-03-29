@@ -6,6 +6,10 @@
   --secondary-color: #1a5183;
 }
 
+body {
+  font-family: "Noto Serif Yezidi", serif;
+}
+
 .navbar {
   padding: 20px 10px;
 }
@@ -58,7 +62,6 @@ nav a,
 }
 
 section {
-  font-family: "Noto Serif Yezidi", serif;
   padding: 50px;
 }
 
@@ -170,4 +173,19 @@ section.testimonials .fa-paw:first-child {
 
 section.testimonials p {
   font-size: 16px;
+}
+
+footer {
+  background-color: var(--off-black);
+  color: lightgray;
+  padding: 50px;
+}
+
+footer a {
+  color: lightgray;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--off-white);
 }
