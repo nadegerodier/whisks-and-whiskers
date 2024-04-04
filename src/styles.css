@@ -15,21 +15,23 @@ body {
 }
 
 nav h1 {
-  font-family: "Cormorant Upright", serif;
+  color: var(--off-white);
   font-size: 28px;
   margin: 0;
 }
 
 nav a,
-.nav-link,
+.nav-link {
+  color: lightgray;
+  font-family: "Cormorant Upright", serif;
+  font-size: 22px;
+  padding: 0 8px;
+  text-decoration: none;
+}
+
 .nav-link-active,
 .nav-link:hover {
   color: var(--off-white);
-  font-family: "Cormorant Upright", serif;
-  font-size: 22px;
-  margin: 0;
-  padding: 0 8px;
-  text-decoration: none;
 }
 
 .navbar-toggler {
