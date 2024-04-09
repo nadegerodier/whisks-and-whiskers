@@ -64,7 +64,8 @@ nav a,
 }
 
 section {
-  padding: 50px 100px;
+  height: 100vh;
+  padding: 150px 100px;
 }
 
 section h3 {
@@ -188,7 +189,7 @@ footer {
   color: lightgray;
   font-family: "Cormorant Upright", serif;
   font-size: 22px;
-  padding: 50px;
+  padding: 25px;
 }
 
 footer a {
