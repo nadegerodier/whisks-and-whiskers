@@ -175,6 +175,10 @@ section.testimonials .fa-paw:first-child {
   padding-left: 0;
 }
 
+section.testimonials .fa-paw-unchecked {
+  color: lightgray;
+}
+
 section.testimonials p {
   font-size: 16px;
 }
