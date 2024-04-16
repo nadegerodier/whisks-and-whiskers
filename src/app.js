@@ -1,5 +1,6 @@
 const navLinks = document.querySelectorAll(".nav-link");
 const sections = document.querySelectorAll("section");
+const navbar = document.getElementById("nav");
 
 function makeActive(currentLink) {
   navLinks.forEach((link) => {
@@ -15,7 +16,7 @@ navLinks.forEach((link) => {
 });
 
 const options = {
-  threshold: 0.7, // Trigger when section is 50% visible
+  threshold: 0.7, // Trigger when section is 70% visible
 };
 
 const observer = new IntersectionObserver((entries, observer) => {
@@ -34,3 +35,10 @@ const observer = new IntersectionObserver((entries, observer) => {
 sections.forEach((section) => {
   observer.observe(section);
 });
+
+function handleScroll() {
+  const alpha = Math.min(window.scrollY / 500, 1);
+  navbar.style.backgroundColor = `rgba(48, 48, 48, ${alpha})`;
+}
+
+window.addEventListener("scroll", handleScroll);
