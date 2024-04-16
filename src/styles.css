@@ -6,6 +6,10 @@
   --secondary-color: #1a5183;
 }
 
+* {
+  scroll-behavior: auto !important;
+}
+
 body {
   font-family: "Noto Serif Yezidi", serif;
 }
