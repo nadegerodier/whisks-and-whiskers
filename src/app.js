@@ -42,3 +42,15 @@ function handleScroll() {
 }
 
 window.addEventListener("scroll", handleScroll);
+
+const navbarTogglerIcon = document.getElementById("navbar-toggler-icon");
+
+navbar.addEventListener("show.bs.collapse", () => {
+  navbarTogglerIcon.classList.add("menu-icon-exit");
+  navbarTogglerIcon.classList.remove("menu-icon-list");
+});
+
+navbar.addEventListener("hide.bs.collapse", () => {
+  navbarTogglerIcon.classList.add("menu-icon-list");
+  navbarTogglerIcon.classList.remove("menu-icon-exit");
+});
