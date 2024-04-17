@@ -253,3 +253,12 @@ footer a {
 footer a:hover {
   color: var(--off-white);
 }
+
+.class-page nav {
+  background-color: var(--off-black);
+}
+
+.class-page section {
+  background-color: lightgray;
+  min-height: calc(100vh - 143px);
+}
