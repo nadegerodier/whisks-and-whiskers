@@ -263,6 +263,49 @@ footer a:hover {
 }
 
 .class-page section {
-  background-color: lightgray;
-  min-height: calc(100vh - 143px);
+  background-color: var(--off-white);
+  color: var(--off-black);
+  min-height: calc(100vh - 191px);
+}
+
+.class-page img {
+  display: block;
+  margin: 0 auto;
+}
+
+.class-page h4 {
+  font-family: "Cormorant Upright", serif;
+  font-size: 36px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.class-page p.class-price {
+  color: rgb(126, 128, 131);
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+}
+
+.class-page span.old-price {
+  color: lightgray;
+  margin-left: 20px;
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+.class-page .btn-book {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: var(--off-white);
+  font-size: 18px;
+  margin: 20px;
+  padding: 8px 20px;
+  transition: all 200ms ease-in-out;
+}
+
+.class-page .btn-book:hover {
+  background-color: var(--off-white);
+  border-color: var(--off-white);
+  color: var(--primary-color);
 }
