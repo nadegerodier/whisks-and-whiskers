@@ -166,7 +166,7 @@ section.classes .btn-class {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   color: var(--off-white);
   font-size: 18px;
-  margin: 20px;
+  margin: 20px 20px 5px;
   padding: 8px 20px;
   transition: all 200ms ease-in-out;
 }
