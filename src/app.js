@@ -26,8 +26,10 @@ const observer = new IntersectionObserver((entries, observer) => {
       const currentNavLink = document.querySelector(
         `.nav-link[href="#${targetId}"]`
       );
-      navLinks.forEach((link) => link.classList.remove("nav-link-active"));
-      currentNavLink.classList.add("nav-link-active");
+      if (currentNavLink) {
+        navLinks.forEach((link) => link.classList.remove("nav-link-active"));
+        currentNavLink.classList.add("nav-link-active");
+      }
     }
   });
 }, options);
