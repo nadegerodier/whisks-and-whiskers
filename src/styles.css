@@ -300,6 +300,10 @@ footer a:hover {
   text-decoration-thickness: 1px;
 }
 
+.class-page div.dropdown-name-area {
+  cursor: pointer;
+}
+
 .class-page div.dropdown.class-specifications {
   border-bottom: 1px solid #e4e9ec;
   border-top: 1px solid #e4e9ec;
