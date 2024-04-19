@@ -56,3 +56,13 @@ navbar.addEventListener("hide.bs.collapse", () => {
   navbarTogglerIcon.classList.add("menu-icon-list");
   navbarTogglerIcon.classList.remove("menu-icon-exit");
 });
+
+const bakingClassDropdown = document.querySelectorAll(".dropdown-name-area");
+
+bakingClassDropdown.forEach((dropdown) => {
+  dropdown.addEventListener("click", function () {
+    const bakingClassDropdownIcon = dropdown.querySelector(".dropdown-icon");
+    bakingClassDropdownIcon.classList.toggle("fa-minus");
+    bakingClassDropdownIcon.classList.toggle("fa-plus");
+  });
+});
