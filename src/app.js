@@ -38,13 +38,6 @@ sections.forEach((section) => {
   observer.observe(section);
 });
 
-function handleScroll() {
-  const alpha = Math.min(window.scrollY / 500, 1);
-  navbar.style.backgroundColor = `rgba(48, 48, 48, ${alpha})`;
-}
-
-window.addEventListener("scroll", handleScroll);
-
 const navbarTogglerIcon = document.getElementById("navbar-toggler-icon");
 
 navbar.addEventListener("show.bs.collapse", () => {
