@@ -59,3 +59,25 @@ bakingClassDropdown.forEach((dropdown) => {
     bakingClassDropdownIcon.classList.toggle("fa-plus");
   });
 });
+
+const cartSection = document.querySelector("#cart");
+const cartArea = document.querySelector(".cart-area");
+const shoppingCartIcon = document.querySelectorAll(".shopping-cart");
+const cartExitIcon = document.querySelector("#exit-cart");
+
+shoppingCartIcon.forEach((cartIcon) => {
+  cartIcon.addEventListener("click", function () {
+    cartSection.classList.remove("d-none");
+  });
+});
+
+cartExitIcon.addEventListener("click", function () {
+  cartSection.classList.add("d-none");
+});
+
+document.addEventListener("click", function (event) {
+  const target = event.target;
+  if (target !== cartArea && target !== shoppingCartIcon[0]) {
+    cartSection.classList.add("d-none");
+  }
+});
