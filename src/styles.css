@@ -99,6 +99,10 @@ section h3 {
   margin: 0;
 }
 
+section h4 {
+  margin-bottom: 0;
+}
+
 section.about-us {
   background-color: var(--branding-color);
   color: var(--off-black);
@@ -266,7 +270,7 @@ footer a:hover {
   background-color: var(--off-black);
 }
 
-.class-page section {
+.class-page section.class-info {
   background-color: var(--off-white);
   color: var(--off-black);
   min-height: calc(100vh - 191px);
@@ -359,4 +363,63 @@ footer a:hover {
 .class-page .participants-quantity {
   border: none;
   width: 50px;
+}
+
+.class-page section.cart {
+  background-color: var(--off-white);
+  color: var(--off-black);
+  padding: 100px 50px;
+}
+
+.class-page .cart-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100vh - 191px);
+}
+
+.class-page h5 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.class-page .cart-content {
+  border-top: 1px solid #e4e9ec;
+}
+
+.class-page .cart-item {
+  border-bottom: 1px solid #e4e9ec;
+}
+
+.class-page .total-cost-area {
+  border-bottom: 1px solid #e4e9ec;
+  border-top: 1px solid #e4e9ec;
+}
+
+.class-page h6 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.class-page .total-cost {
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  opacity: 0.6;
+}
+
+.class-page .btn-checkout {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  border-radius: 100px;
+  color: var(--off-white);
+  font-size: 18px;
+  margin: 30px 0;
+  padding: 15px 60px;
+  transition: all 200ms ease-in-out;
+  width: 100%;
+}
+
+.class-page .btn-checkout:hover {
+  background-color: var(--off-white);
+  color: var(--primary-color);
 }
