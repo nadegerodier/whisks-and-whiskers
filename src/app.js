@@ -77,7 +77,12 @@ cartExitIcon.addEventListener("click", function () {
 
 document.addEventListener("click", function (event) {
   const target = event.target;
-  if (target !== cartArea && target !== shoppingCartIcon[0]) {
+  if (!cartArea.contains(target) && target !== shoppingCartIcon[0]) {
     cartSection.classList.add("d-none");
   }
+});
+
+document.addEventListener("click", function (event) {
+  let target = event.target;
+  console.log(target);
 });
