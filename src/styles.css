@@ -111,15 +111,16 @@ section.cart #exit-cart {
   cursor: pointer;
 }
 
-section.cart h5 {
-  font-size: 30px;
+section.cart h3 {
+  font-size: 36px;
   margin: 0;
 }
 
 section.cart .cart-content {
   height: calc(100vh - 353px);
-  margin: 20px 20px 0 50px;
+  margin: 20px 20px 0;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 section.cart .cart-item {
@@ -128,6 +129,25 @@ section.cart .cart-item {
 
 section.cart .cart-item:first-child {
   border-top: none;
+}
+
+section.cart h5 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+section.cart .item-price {
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+}
+
+section.cart .item-quantity {
+  width: 50px;
+}
+
+section.cart .fa-trash-can {
+  font-size: 18px;
+  opacity: 0.8;
 }
 
 section.cart .cart-footer {
@@ -140,14 +160,13 @@ section.cart .total-cost-area {
 }
 
 section.cart h6 {
-  font-size: 20px;
+  font-size: 22px;
   margin: 0;
 }
 
 section.cart .total-cost {
   font-family: "Manrope", sans-serif;
-  font-size: 20px;
-  opacity: 0.6;
+  font-size: 22px;
 }
 
 section.cart .btn-checkout {
@@ -155,7 +174,7 @@ section.cart .btn-checkout {
   border-color: var(--primary-color);
   border-radius: 100px;
   color: var(--off-white);
-  font-size: 18px;
+  font-size: 20px;
   margin-top: 30px;
   padding: 15px 60px;
   transition: all 200ms ease-in-out;
@@ -428,7 +447,7 @@ footer a:hover {
   border-color: lightgray;
   color: var(--off-black);
   cursor: auto;
-  font-size: 16px;
+  font-size: 18px;
   margin: 20px;
   padding: 8px 20px;
 }
@@ -438,6 +457,7 @@ footer a:hover {
 }
 
 .class-page .participants-quantity {
+  background-color: var(--off-white);
   border: none;
   width: 50px;
 }
