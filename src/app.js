@@ -298,6 +298,23 @@ function removeItem() {
     (el) => el.bakingClassName != bakingClassName
   );
   cartItemElement.remove();
+
+  const cartFooter = document.querySelector(".cart-footer");
+  const cartContentElement = document.querySelector(".cart-content");
+  if (cartItemsList.length === 0) {
+    cartFooter.classList.add("d-none");
+    cartContentElement.innerHTML = `<div
+                class="empty-cart d-flex flex-column justify-content-center align-items-center"
+              >
+                <div class="empty-cart-message">
+                  Your shopping cart is empty
+                </div>
+                <a href="/index.html#baking-classes" class="btn btn-empty-cart"
+                  >Shop our classes</a
+                >
+              </div>`;
+  }
+
   loadContent();
 }
 
