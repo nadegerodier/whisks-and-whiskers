@@ -93,9 +93,6 @@ section.cart {
 section.cart .cart-area {
   background-color: var(--off-white);
   cursor: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   min-height: 100vh;
   transform: translateX(30px);
   transition: transform 500ms ease-in-out;
@@ -121,6 +118,30 @@ section.cart .cart-content {
   margin: 20px 20px 0;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+section.cart .empty-cart {
+  height: 100%;
+}
+
+section.cart .empty-cart-message {
+  font-size: 20px;
+}
+
+section.cart .btn-empty-cart {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  border-radius: 100px;
+  color: var(--off-white);
+  font-size: 20px;
+  margin-top: 30px;
+  padding: 15px 30px;
+  transition: all 200ms ease-in-out;
+}
+
+section.cart .btn-empty-cart:hover {
+  background-color: var(--off-white);
+  color: var(--primary-color);
 }
 
 section.cart .cart-item {
@@ -176,7 +197,7 @@ section.cart .btn-checkout {
   color: var(--off-white);
   font-size: 20px;
   margin-top: 30px;
-  padding: 15px 60px;
+  padding: 15px 0;
   transition: all 200ms ease-in-out;
   width: 100%;
 }

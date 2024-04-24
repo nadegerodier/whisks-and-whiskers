@@ -97,13 +97,13 @@
     <div class="container-fluid ps-0 pe-0">
       <section class="cart justify-content-between" id="cart">
         <div></div>
-        <div class="cart-area">
+        <div class="cart-area d-flex flex-column justify-content-between">
           <div>
             <div
               class="cart-header d-flex justify-content-between align-items-center"
             >
               <div></div>
-              <div class="ps-4"><h3>Your Cart (2)</h3></div>
+              <div class="ps-4"><h3>Your Cart (0)</h3></div>
               <div class="pe-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -121,87 +121,19 @@
               </div>
             </div>
             <div class="cart-content">
-              <div class="cart-item pt-4 pb-4">
-                <div class="row">
-                  <div class="col-3">
-                    <img
-                      src="https://www.surlatable.com/on/demandware.static/-/Sites/default/dw02bf805c/images/culinary_2024/cc_300_CFA-8672669_Wildflower_Macarons.jpg"
-                      alt=""
-                      class="img-fluid rounded cart-img"
-                    />
-                  </div>
-                  <div class="col-6 ps-0">
-                    <h5 class="pt-1">Tuna Cookie</h5>
-                    <div class="pt-2">
-                      Quantity:
-                      <input
-                        type="number"
-                        value="1"
-                        class="item-quantity text-center"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-3 text-end">
-                    <div class="item-price">$ 80.00</div>
-                    <i class="fa-regular fa-trash-can pt-4"></i>
-                  </div>
+              <div
+                class="empty-cart d-flex flex-column justify-content-center align-items-center"
+              >
+                <div class="empty-cart-message">
+                  Your shopping cart is empty
                 </div>
-              </div>
-              <div class="cart-item pt-4 pb-4">
-                <div class="row">
-                  <div class="col-3">
-                    <img
-                      src="https://www.surlatable.com/on/demandware.static/-/Sites/default/dw3e952901/images/culinary_2024/cc_300_CFA-8672677_Puff_Pastry_Strawberry_Cake.jpg"
-                      alt=""
-                      class="img-fluid rounded cart-img"
-                    />
-                  </div>
-                  <div class="col-6 ps-0">
-                    <h5 class="pt-1">Salmon Muffin</h5>
-                    <div class="pt-2">
-                      Quantity:
-                      <input
-                        type="number"
-                        value="2"
-                        class="item-quantity text-center"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-3 text-end">
-                    <div class="item-price">$ 160.00</div>
-                    <i class="fa-regular fa-trash-can pt-4"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="cart-item pt-4 pb-4">
-                <div class="row">
-                  <div class="col-3">
-                    <img
-                      src="https://www.surlatable.com/on/demandware.static/-/Sites/default/dwcfd3880a/images/culinary_2024/cc_300_CFA-7261696_Petite_Treats_Chocolate_Dipped_Madeleines.jpg"
-                      alt=""
-                      class="img-fluid rounded cart-img"
-                    />
-                  </div>
-                  <div class="col-6 ps-0">
-                    <h5 class="pt-1">Catnip Croissants</h5>
-                    <div class="pt-2">
-                      Quantity:
-                      <input
-                        type="number"
-                        value="1"
-                        class="item-quantity text-center"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-3 text-end">
-                    <div class="item-price">$ 80.00</div>
-                    <i class="fa-regular fa-trash-can pt-4"></i>
-                  </div>
-                </div>
+                <a href="/index.html#baking-classes" class="btn btn-empty-cart"
+                  >Shop our classes</a
+                >
               </div>
             </div>
           </div>
-          <div class="cart-footer">
+          <div class="cart-footer d-none">
             <div
               class="total-cost-area d-flex justify-content-between align-items-center pt-4 pb-4"
             >
@@ -219,7 +151,7 @@
             <img
               src="https://www.surlatable.com/on/demandware.static/-/Sites/default/dw3e952901/images/culinary_2024/cc_300_CFA-8672677_Puff_Pastry_Strawberry_Cake.jpg"
               alt=""
-              class="img-fluid rounded shadow"
+              class="img-fluid rounded shadow class-img"
             />
           </div>
           <div class="col">
@@ -296,6 +228,7 @@
                   class="participants-quantity text-center"
                   type="number"
                   value="1"
+                  min="1"
                 />
               </span>
               <a class="btn btn-book">Add to Cart</a>
