@@ -98,73 +98,209 @@ document.addEventListener("click", function (event) {
   }
 });
 
-const bookBtn = document.querySelectorAll(".btn-book");
-const numberOfParticipants = document.querySelector(".participants-quantity");
-const bakingClassName = document.querySelector(".class-name");
-const classImage = document.querySelector(".class-img");
-const unitCost = document.querySelector(".unit-cost");
-const cartContentElement = document.querySelector(".cart-content");
-const cartFooter = document.querySelector(".cart-footer");
-let cartItems = [];
+// /const addToCartBtn = document.querySelectorAll(".btn-add-to-cart");
+// /const numberOfParticipants = document.querySelector(".participants-quantity");
+// /const cartContentElement = document.querySelector(".cart-content");
+// /const bakingClassName = document.querySelector(".class-name");
+// /const bakingClassImageURL = document.querySelector(".class-img");
+// /const bakingClassPrice = document.querySelector(".class-current-price");
+// /const cartFooter = document.querySelector(".cart-footer");
+// /let cartItems = [];
 
-function updateCart() {
-  if (cartItems.length === 0) {
-    cartContentElement.innerHTML = `<div class="empty-cart d-flex flex-column justify-content-center align-items-center">
-          <div class="empty-cart-message">
-            Your shopping cart is empty
-          </div>
-          <a href="#baking-classes" class="btn btn-empty-cart">
-            Shop our classes
-          </a>
-        </div>`;
+//Method 1
+// function removeItem(index) {
+//   cartItems.splice(index, 1);
+//   updateCart();
+//   saveCartToLocalStorage();
+// }
+
+// cartContentElement.addEventListener("click", function (event) {
+//   if (event.target.classList.contains("fa-trash-can")) {
+//     const itemIndex = event.target.closest(".cart-item").dataset.index;
+//     removeItem(itemIndex);
+//     console.log(itemIndex);
+//   }
+// });
+
+// function updateCart() {
+//   if (cartItems.length === 0) {
+//     cartContentElement.innerHTML = `<div class="empty-cart d-flex flex-column justify-content-center align-items-center">
+//           <div class="empty-cart-message">
+//             Your shopping cart is empty
+//           </div>
+//           <a href="#baking-classes" class="btn btn-empty-cart">
+//             Shop our classes
+//           </a>
+//         </div>`;
+//   } else {
+//     cartContentElement.innerHTML = cartItems.join("");
+//   }
+// }
+
+// function saveCartToLocalStorage() {
+//   localStorage.setItem("cartItems", JSON.stringify(cartItems));
+// }
+
+// addToCartBtn.forEach((btn) => {
+//   btn.addEventListener("click", function () {
+//     cartFooter.classList.remove("d-none");
+//     const price = bakingClassPrice.innerHTML;
+//     let quantity = numberOfParticipants.value;
+//     let priceTotal = price * quantity;
+//     let dataIndex = cartItems.length;
+//     let newItem = `<div class="cart-item pt-4 pb-4" data-index="${dataIndex}">
+//         <div class="row">
+//           <div class="col-3">
+//             <img
+//               src=${bakingClassImageURL.src}
+//               alt="baking class preview"
+//               class="img-fluid rounded"
+//             />
+//           </div>
+//           <div class="col-6 ps-0">
+//             <h5 class="pt-1">${bakingClassName.innerHTML}</h5>
+//             <div class="pt-2">
+//               Quantity:
+//               <input
+//                 class="item-quantity text-center"
+//                 type="number"
+//                 value=${quantity}
+//                 min="1"
+//               />
+//             </div>
+//           </div>
+//           <div class="col-3 text-end">
+//             <div class="item-price">$ ${priceTotal}.00</div>
+//             <i class="fa-regular fa-trash-can pt-4"></i>
+//           </div>
+//         </div>
+//       </div>`;
+//     cartItems.push(newItem);
+//     updateCart();
+//     saveCartToLocalStorage();
+//   });
+// });
+
+// window.addEventListener("load", function () {
+//   const storedCartItems = localStorage.getItem("cartItems");
+//   if (storedCartItems) {
+//     cartItems = JSON.parse(storedCartItems);
+//     updateCart();
+//   }
+// });
+
+//Method 2
+document.addEventListener("DOMContentLoaded", loadContent);
+
+let cartItemsList = [];
+
+function loadContent() {
+  const addToCartBtn = document.querySelectorAll(".btn-add-to-cart");
+  addToCartBtn.forEach((addBtn) => {
+    addBtn.addEventListener("click", getItemData);
+  });
+
+  const removeFromCartBtn = document.querySelectorAll(".fa-trash-can");
+  removeFromCartBtn.forEach((removeBtn) => {
+    removeBtn.addEventListener("click", removeItem);
+  });
+}
+
+function getItemData() {
+  const bakingClassSection = this.closest(".class-info");
+  const bakingClassName =
+    bakingClassSection.querySelector(".class-name").innerHTML;
+  const numberOfParticipants = bakingClassSection.querySelector(
+    ".participants-quantity"
+  ).value;
+  const bakingClassPrice = bakingClassSection.querySelector(
+    ".class-current-price"
+  ).innerHTML;
+  const bakingClassCost = numberOfParticipants * bakingClassPrice;
+  const bakingClassImageURL =
+    bakingClassSection.querySelector(".class-img").src;
+
+  const newItem = {
+    bakingClassName,
+    numberOfParticipants,
+    bakingClassCost,
+    bakingClassImageURL,
+  };
+
+  if (
+    cartItemsList.find((el) => el.bakingClassName === newItem.bakingClassName)
+  ) {
+    alert("product already in cart");
   } else {
-    cartContentElement.innerHTML = cartItems.join("");
+    cartItemsList.push(newItem);
   }
+
+  addToCart(
+    bakingClassName,
+    numberOfParticipants,
+    bakingClassCost,
+    bakingClassImageURL
+  );
+
+  loadContent();
 }
 
-function saveCartToLocalStorage() {
-  localStorage.setItem("cartItems", JSON.stringify(cartItems));
-}
-
-bookBtn.forEach((btn) => {
-  btn.addEventListener("click", function () {
+function addToCart(
+  bakingClassName,
+  numberOfParticipants,
+  bakingClassCost,
+  bakingClassImageURL
+) {
+  const cartContentElement = document.querySelector(".cart-content");
+  if (cartItemsList.length === 0) {
+    cartContentElement.innerHTML = `<div class="empty-cart d-flex flex-column justify-content-center align-items-center">
+              <div class="empty-cart-message">
+                Your shopping cart is empty
+              </div>
+              <a href="#baking-classes" class="btn btn-empty-cart">
+                Shop our classes
+              </a>
+            </div>`;
+  } else {
+    const cartFooter = document.querySelector(".cart-footer");
     cartFooter.classList.remove("d-none");
-    const price = unitCost.innerHTML;
-    let quantity = numberOfParticipants.value;
-    let priceTotal = price * quantity;
-    let newItem = `<div class="cart-item pt-4 pb-4">
+    cartContentElement.innerHTML = `<div class="cart-item pt-4 pb-4">
         <div class="row">
           <div class="col-3">
             <img
-              src=${classImage.src}
+              src=${bakingClassImageURL}
               alt="baking class preview"
               class="img-fluid rounded"
             />
           </div>
           <div class="col-6 ps-0">
-            <h5 class="pt-1">${bakingClassName.innerHTML}</h5>
+            <h5 class="baking-class-name pt-1">${bakingClassName}</h5>
             <div class="pt-2">
               Quantity:
               <input
                 class="item-quantity text-center"
                 type="number"
-                value=${quantity}
+                value=${numberOfParticipants}
                 min="1"
               />
             </div>
           </div>
           <div class="col-3 text-end">
-            <div class="item-price">$ ${priceTotal}.00</div>
+            <div class="item-price">$ ${bakingClassCost}.00</div>
             <i class="fa-regular fa-trash-can pt-4"></i>
           </div>
         </div>
       </div>`;
-    cartItems.push(newItem);
-    updateCart();
-    saveCartToLocalStorage();
-  });
-});
+  }
+}
 
-window.addEventListener("load", function () {
-  updateCart();
-});
+function removeItem() {
+  const cartItemElement = this.closest(".cart-item");
+  const bakingClassName =
+    cartItemElement.querySelector(".baking-class-name").innerHTML;
+  cartItemsList = cartItemsList.filter(
+    (el) => el.bakingClassName != bakingClassName
+  );
+  this.closest(".cart-item").remove();
+  loadContent();
+}
