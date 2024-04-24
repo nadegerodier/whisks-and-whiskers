@@ -237,22 +237,12 @@ function getItemData() {
 
   cartItemsList.push(newItem);
 
-  addToCart(
-    bakingClassName,
-    numberOfParticipants,
-    bakingClassCost,
-    bakingClassImageURL
-  );
+  addToCart(newItem);
 
   loadContent();
 }
 
-function addToCart(
-  bakingClassName,
-  numberOfParticipants,
-  bakingClassCost,
-  bakingClassImageURL
-) {
+function addToCart(item) {
   const cartFooter = document.querySelector(".cart-footer");
   cartFooter.classList.remove("d-none");
   const cartContentElement = document.querySelector(".cart-content");
@@ -260,25 +250,26 @@ function addToCart(
         <div class="row">
           <div class="col-3">
             <img
-              src=${bakingClassImageURL}
+              src=${item.bakingClassImageURL}
               alt="baking class preview"
               class="img-fluid rounded"
             />
           </div>
           <div class="col-6 ps-0">
-            <h5 class="baking-class-name pt-1">${bakingClassName}</h5>
+            <h5 class="baking-class-name pt-1">${item.bakingClassName}</h5>
             <div class="pt-2">
               Quantity:
               <input
                 class="item-quantity text-center"
                 type="number"
-                value=${numberOfParticipants}
+                value=${item.numberOfParticipants}
                 min="1"
+                id="item-quantity"
               />
             </div>
           </div>
           <div class="col-3 text-end">
-            <span class=unit-cost>${bakingClassCost}</span>
+            <span class=unit-cost>${item.bakingClassCost}</span>
             <div class="item-price"></div>
             <i class="fa-regular fa-trash-can trash-can pt-4"></i>
           </div>
