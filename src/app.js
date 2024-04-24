@@ -297,7 +297,7 @@ function removeItem() {
   cartItemsList = cartItemsList.filter(
     (el) => el.bakingClassName != bakingClassName
   );
-  this.closest(".cart-item").remove();
+  cartItemElement.remove();
   loadContent();
 }
 
@@ -305,38 +305,39 @@ function updateTotalCost() {
   const cartItems = document.querySelectorAll(".cart-item");
   const cartTotalQuantity = document.querySelector(".total-quantity");
   const cartTotalCost = document.querySelector(".total-cost");
-  let quantityTotal;
-  let total;
+  let total = 0;
+  let quantityTotal = 0;
 
   cartItems.forEach((item) => {
-    const cartItemUnitCost = item.querySelector(".unit-cost").innerHTML;
-    const cartItemQuantity = item.querySelector(".item-quantity").value;
+    const cartItemUnitCost = parseFloat(
+      item.querySelector(".unit-cost").innerHTML
+    );
+    const cartItemQuantity = parseInt(
+      item.querySelector(".item-quantity").value
+    );
     const cartItemTotalCost = cartItemUnitCost * cartItemQuantity;
 
     const cartItemPriceElement = item.querySelector(".item-price");
     cartItemPriceElement.innerHTML = `$ ${cartItemTotalCost}.00`;
 
-    quantityTotal = cartItemQuantity;
-    total = cartItemTotalCost;
+    quantityTotal += cartItemQuantity;
+    total += cartItemTotalCost;
   });
 
-  if (quantityTotal == undefined) {
-    quantityTotal = null;
-  } else {
-    quantityTotal;
-  }
   cartTotalQuantity.innerHTML = quantityTotal;
 
   cartTotalCost.innerHTML = `$ ${total}.00`;
 }
 
 function updateCartCount() {
-  const cartTotalQuantity = document.querySelector(".total-quantity").innerHTML;
+  const cartTotalQuantity = parseInt(
+    document.querySelector(".total-quantity").innerHTML
+  );
   const cartCountElement = document.querySelector(".cart-count");
   const cartCountNavbarElement = document.querySelector(".cart-count-navbar");
   const itemsCount = cartTotalQuantity;
 
-  if (itemsCount == 0) {
+  if (itemsCount === 0) {
     cartCountElement.innerHTML = "";
     cartCountNavbarElement.innerHTML = "";
   } else {
