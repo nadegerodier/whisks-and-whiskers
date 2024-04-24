@@ -115,7 +115,7 @@ document.addEventListener("click", function (event) {
 // }
 
 // cartContentElement.addEventListener("click", function (event) {
-//   if (event.target.classList.contains("fa-trash-can")) {
+//   if (event.target.classList.contains("trash-can")) {
 //     const itemIndex = event.target.closest(".cart-item").dataset.index;
 //     removeItem(itemIndex);
 //     console.log(itemIndex);
@@ -171,7 +171,7 @@ document.addEventListener("click", function (event) {
 //           </div>
 //           <div class="col-3 text-end">
 //             <div class="item-price">$ ${priceTotal}.00</div>
-//             <i class="fa-regular fa-trash-can pt-4"></i>
+//             <i class="fa-regular fa-trash-can trash-can pt-4"></i>
 //           </div>
 //         </div>
 //       </div>`;
@@ -200,10 +200,19 @@ function loadContent() {
     addBtn.addEventListener("click", getItemData);
   });
 
-  const removeFromCartBtn = document.querySelectorAll(".fa-trash-can");
+  const changeCartQuantity = document.querySelectorAll(".item-quantity");
+  changeCartQuantity.forEach((input) => {
+    input.addEventListener("change", changeQuantity);
+  });
+
+  const removeFromCartBtn = document.querySelectorAll(".trash-can");
   removeFromCartBtn.forEach((removeBtn) => {
     removeBtn.addEventListener("click", removeItem);
   });
+
+  updateTotalCost();
+
+  updateCartCount();
 }
 
 function getItemData() {
@@ -213,10 +222,9 @@ function getItemData() {
   const numberOfParticipants = bakingClassSection.querySelector(
     ".participants-quantity"
   ).value;
-  const bakingClassPrice = bakingClassSection.querySelector(
+  const bakingClassCost = bakingClassSection.querySelector(
     ".class-current-price"
   ).innerHTML;
-  const bakingClassCost = numberOfParticipants * bakingClassPrice;
   const bakingClassImageURL =
     bakingClassSection.querySelector(".class-img").src;
 
@@ -227,13 +235,7 @@ function getItemData() {
     bakingClassImageURL,
   };
 
-  if (
-    cartItemsList.find((el) => el.bakingClassName === newItem.bakingClassName)
-  ) {
-    alert("product already in cart");
-  } else {
-    cartItemsList.push(newItem);
-  }
+  cartItemsList.push(newItem);
 
   addToCart(
     bakingClassName,
@@ -251,20 +253,10 @@ function addToCart(
   bakingClassCost,
   bakingClassImageURL
 ) {
+  const cartFooter = document.querySelector(".cart-footer");
+  cartFooter.classList.remove("d-none");
   const cartContentElement = document.querySelector(".cart-content");
-  if (cartItemsList.length === 0) {
-    cartContentElement.innerHTML = `<div class="empty-cart d-flex flex-column justify-content-center align-items-center">
-              <div class="empty-cart-message">
-                Your shopping cart is empty
-              </div>
-              <a href="#baking-classes" class="btn btn-empty-cart">
-                Shop our classes
-              </a>
-            </div>`;
-  } else {
-    const cartFooter = document.querySelector(".cart-footer");
-    cartFooter.classList.remove("d-none");
-    cartContentElement.innerHTML = `<div class="cart-item pt-4 pb-4">
+  cartContentElement.innerHTML = `<div class="cart-item pt-4 pb-4">
         <div class="row">
           <div class="col-3">
             <img
@@ -286,12 +278,16 @@ function addToCart(
             </div>
           </div>
           <div class="col-3 text-end">
-            <div class="item-price">$ ${bakingClassCost}.00</div>
-            <i class="fa-regular fa-trash-can pt-4"></i>
+            <span class=unit-cost>${bakingClassCost}</span>
+            <div class="item-price"></div>
+            <i class="fa-regular fa-trash-can trash-can pt-4"></i>
           </div>
         </div>
       </div>`;
-  }
+}
+
+function changeQuantity() {
+  loadContent();
 }
 
 function removeItem() {
@@ -303,4 +299,48 @@ function removeItem() {
   );
   this.closest(".cart-item").remove();
   loadContent();
+}
+
+function updateTotalCost() {
+  const cartItems = document.querySelectorAll(".cart-item");
+  const cartTotalQuantity = document.querySelector(".total-quantity");
+  const cartTotalCost = document.querySelector(".total-cost");
+  let quantityTotal;
+  let total;
+
+  cartItems.forEach((item) => {
+    const cartItemUnitCost = item.querySelector(".unit-cost").innerHTML;
+    const cartItemQuantity = item.querySelector(".item-quantity").value;
+    const cartItemTotalCost = cartItemUnitCost * cartItemQuantity;
+
+    const cartItemPriceElement = item.querySelector(".item-price");
+    cartItemPriceElement.innerHTML = `$ ${cartItemTotalCost}.00`;
+
+    quantityTotal = cartItemQuantity;
+    total = cartItemTotalCost;
+  });
+
+  if (quantityTotal == undefined) {
+    quantityTotal = null;
+  } else {
+    quantityTotal;
+  }
+  cartTotalQuantity.innerHTML = quantityTotal;
+
+  cartTotalCost.innerHTML = `$ ${total}.00`;
+}
+
+function updateCartCount() {
+  const cartTotalQuantity = document.querySelector(".total-quantity").innerHTML;
+  const cartCountElement = document.querySelector(".cart-count");
+  const cartCountNavbarElement = document.querySelector(".cart-count-navbar");
+  const itemsCount = cartTotalQuantity;
+
+  if (itemsCount == 0) {
+    cartCountElement.innerHTML = "";
+    cartCountNavbarElement.innerHTML = "";
+  } else {
+    cartCountElement.innerHTML = ` (${itemsCount})`;
+    cartCountNavbarElement.innerHTML = ` ${itemsCount}`;
+  }
 }

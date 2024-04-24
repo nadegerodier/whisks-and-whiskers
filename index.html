@@ -78,6 +78,7 @@
             <li class="nav-item">
               <a class="nav-link">
                 <i class="fa-solid fa-cart-shopping shopping-cart"></i
+                ><span class="cart-count-navbar"></span
               ></a>
             </li>
           </ul>
@@ -94,7 +95,9 @@
               class="cart-header d-flex justify-content-between align-items-center"
             >
               <div></div>
-              <div class="ps-4"><h3>Your Cart (0)</h3></div>
+              <div class="ps-4">
+                <h3>Your Cart<span class="cart-count"></span></h3>
+              </div>
               <div class="pe-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -111,14 +114,26 @@
                 </svg>
               </div>
             </div>
-            <div class="cart-content"></div>
+            <div class="cart-content">
+              <div
+                class="empty-cart d-flex flex-column justify-content-center align-items-center"
+              >
+                <div class="empty-cart-message">
+                  Your shopping cart is empty
+                </div>
+                <a href="/index.html#baking-classes" class="btn btn-empty-cart"
+                  >Shop our classes</a
+                >
+              </div>
+            </div>
           </div>
           <div class="cart-footer d-none">
             <div
               class="total-cost-area d-flex justify-content-between align-items-center pt-4 pb-4"
             >
               <h6>Total:</h6>
-              <div class="total-cost">$ 400.00</div>
+              <div class="total-cost"></div>
+              <div class="total-quantity d-none"></div>
             </div>
             <a href="/" class="btn btn-checkout">Continue to Checkout</a>
           </div>
