@@ -98,98 +98,23 @@ document.addEventListener("click", function (event) {
   }
 });
 
-// /const addToCartBtn = document.querySelectorAll(".btn-add-to-cart");
-// /const numberOfParticipants = document.querySelector(".participants-quantity");
-// /const cartContentElement = document.querySelector(".cart-content");
-// /const bakingClassName = document.querySelector(".class-name");
-// /const bakingClassImageURL = document.querySelector(".class-img");
-// /const bakingClassPrice = document.querySelector(".class-current-price");
-// /const cartFooter = document.querySelector(".cart-footer");
-// /let cartItems = [];
+window.addEventListener("load", function () {
+  const storedCartItems = localStorage.getItem("cartItems");
+  if (storedCartItems) {
+    try {
+      cartItemsList = JSON.parse(storedCartItems);
+      cartItemsList.forEach((item) => addToCart(item));
+    } catch (error) {
+      console.error("Error parsing cart items:", error);
+    }
+  }
+  loadContent();
+});
 
-//Method 1
-// function removeItem(index) {
-//   cartItems.splice(index, 1);
-//   updateCart();
-//   saveCartToLocalStorage();
-// }
+function saveCartToLocalStorage() {
+  localStorage.setItem("cartItems", JSON.stringify(cartItemsList));
+}
 
-// cartContentElement.addEventListener("click", function (event) {
-//   if (event.target.classList.contains("trash-can")) {
-//     const itemIndex = event.target.closest(".cart-item").dataset.index;
-//     removeItem(itemIndex);
-//     console.log(itemIndex);
-//   }
-// });
-
-// function updateCart() {
-//   if (cartItems.length === 0) {
-//     cartContentElement.innerHTML = `<div class="empty-cart d-flex flex-column justify-content-center align-items-center">
-//           <div class="empty-cart-message">
-//             Your shopping cart is empty
-//           </div>
-//           <a href="#baking-classes" class="btn btn-empty-cart">
-//             Shop our classes
-//           </a>
-//         </div>`;
-//   } else {
-//     cartContentElement.innerHTML = cartItems.join("");
-//   }
-// }
-
-// function saveCartToLocalStorage() {
-//   localStorage.setItem("cartItems", JSON.stringify(cartItems));
-// }
-
-// addToCartBtn.forEach((btn) => {
-//   btn.addEventListener("click", function () {
-//     cartFooter.classList.remove("d-none");
-//     const price = bakingClassPrice.innerHTML;
-//     let quantity = numberOfParticipants.value;
-//     let priceTotal = price * quantity;
-//     let dataIndex = cartItems.length;
-//     let newItem = `<div class="cart-item pt-4 pb-4" data-index="${dataIndex}">
-//         <div class="row">
-//           <div class="col-3">
-//             <img
-//               src=${bakingClassImageURL.src}
-//               alt="baking class preview"
-//               class="img-fluid rounded"
-//             />
-//           </div>
-//           <div class="col-6 ps-0">
-//             <h5 class="pt-1">${bakingClassName.innerHTML}</h5>
-//             <div class="pt-2">
-//               Quantity:
-//               <input
-//                 class="item-quantity text-center"
-//                 type="number"
-//                 value=${quantity}
-//                 min="1"
-//               />
-//             </div>
-//           </div>
-//           <div class="col-3 text-end">
-//             <div class="item-price">$ ${priceTotal}.00</div>
-//             <i class="fa-regular fa-trash-can trash-can pt-4"></i>
-//           </div>
-//         </div>
-//       </div>`;
-//     cartItems.push(newItem);
-//     updateCart();
-//     saveCartToLocalStorage();
-//   });
-// });
-
-// window.addEventListener("load", function () {
-//   const storedCartItems = localStorage.getItem("cartItems");
-//   if (storedCartItems) {
-//     cartItems = JSON.parse(storedCartItems);
-//     updateCart();
-//   }
-// });
-
-//Method 2
 document.addEventListener("DOMContentLoaded", loadContent);
 
 let cartItemsList = [];
@@ -242,6 +167,7 @@ function getItemData() {
     newItem.numberOfParticipants =
       Number(newItem.numberOfParticipants) +
       Number(duplicateItem.numberOfParticipants);
+    duplicateItem.numberOfParticipants = newItem.numberOfParticipants;
     updateCart(duplicateItem);
   } else {
     cartItemsList.push(newItem);
@@ -303,10 +229,25 @@ function addToCart(item) {
         </div>
       </div>`;
   cartContentElement.insertAdjacentHTML("beforeend", cartItemHTML);
+  saveCartToLocalStorage();
 }
 
 function changeQuantity() {
+  const cartItemElement = this.closest(".cart-item");
+  const cartItemBakingClassName =
+    cartItemElement.querySelector(".baking-class-name").innerHTML;
+  const cartItemQuantity =
+    cartItemElement.querySelector(".item-quantity").value;
+
+  const cartItemElementIndex = cartItemsList.findIndex(
+    (item) => item.bakingClassName == cartItemBakingClassName
+  );
+
+  cartItemsList[cartItemElementIndex].numberOfParticipants = cartItemQuantity;
+
   loadContent();
+
+  saveCartToLocalStorage();
 }
 
 function removeItem() {
@@ -335,6 +276,7 @@ function removeItem() {
   }
 
   loadContent();
+  saveCartToLocalStorage();
 }
 
 function updateTotalCost() {
