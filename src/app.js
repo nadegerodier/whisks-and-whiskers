@@ -235,7 +235,17 @@ function getItemData() {
     bakingClassImageURL,
   };
 
-  cartItemsList.push(newItem);
+  const duplicateItem = cartItemsList.find(
+    (el) => el.bakingClassName == newItem.bakingClassName
+  );
+  if (duplicateItem) {
+    newItem.numberOfParticipants =
+      Number(newItem.numberOfParticipants) +
+      Number(duplicateItem.numberOfParticipants);
+    duplicateItem.numberOfParticipants = newItem.numberOfParticipants;
+  } else {
+    cartItemsList.push(newItem);
+  }
 
   addToCart(newItem);
 
