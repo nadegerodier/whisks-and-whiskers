@@ -145,11 +145,11 @@ section.cart .btn-empty-cart:hover {
 }
 
 section.cart .cart-item {
-  border-top: 1px solid #e4e9ec;
+  border-bottom: 1px solid #e4e9ec;
 }
 
-section.cart .cart-item:first-child {
-  border-top: none;
+section.cart .cart-item:last-child {
+  border-bottom: none;
 }
 
 section.cart h5 {

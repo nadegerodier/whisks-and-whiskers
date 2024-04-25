@@ -242,7 +242,7 @@ function getItemData() {
     newItem.numberOfParticipants =
       Number(newItem.numberOfParticipants) +
       Number(duplicateItem.numberOfParticipants);
-    duplicateItem.numberOfParticipants = newItem.numberOfParticipants;
+    updateCart(duplicateItem);
   } else {
     cartItemsList.push(newItem);
   }
@@ -252,11 +252,28 @@ function getItemData() {
   loadContent();
 }
 
+function updateCart(item) {
+  const cartContentElement = document.querySelector(".cart-content");
+  const cartContentH5Elements = cartContentElement.querySelectorAll("h5");
+
+  let foundDuplicateItem;
+  cartContentH5Elements.forEach((h5Element) => {
+    if (h5Element.innerHTML === item.bakingClassName) {
+      foundDuplicateItem = h5Element;
+    }
+  });
+
+  const foundDuplicateItemElement = foundDuplicateItem.closest(".cart-item");
+  foundDuplicateItemElement.remove();
+}
+
 function addToCart(item) {
   const cartFooter = document.querySelector(".cart-footer");
   cartFooter.classList.remove("d-none");
+  const emptyCartInfo = document.querySelector(".empty-cart");
+  emptyCartInfo.classList.add("d-none");
   const cartContentElement = document.querySelector(".cart-content");
-  cartContentElement.innerHTML = `<div class="cart-item pt-4 pb-4">
+  const cartItemHTML = `<div class="cart-item pt-4 pb-4">
         <div class="row">
           <div class="col-3">
             <img
@@ -274,7 +291,7 @@ function addToCart(item) {
                 type="number"
                 value=${item.numberOfParticipants}
                 min="1"
-                id="item-quantity"
+                name="item-quantity"
               />
             </div>
           </div>
@@ -285,6 +302,7 @@ function addToCart(item) {
           </div>
         </div>
       </div>`;
+  cartContentElement.insertAdjacentHTML("beforeend", cartItemHTML);
 }
 
 function changeQuantity() {
