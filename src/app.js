@@ -63,39 +63,48 @@ bakingClassDropdown.forEach((dropdown) => {
 const cartSection = document.querySelector("#cart");
 const cartArea = document.querySelector(".cart-area");
 const shoppingCartIcon = document.querySelectorAll(".shopping-cart");
+const addToCartBtn = document.querySelectorAll(".btn-add-to-cart");
 const cartExitIcon = document.querySelector("#exit-cart");
 const emptyCartBtn = document.querySelector(".btn-empty-cart");
 
-shoppingCartIcon.forEach((cartIcon) => {
-  cartIcon.addEventListener("click", function () {
-    cartSection.style.display = "flex";
-    setTimeout(function () {
-      cartSection.style.opacity = "1";
-      cartArea.style.transform = "translateX(0px)";
-    }, 1);
-  });
-});
+function showCart() {
+  cartSection.style.display = "flex";
+  setTimeout(function () {
+    cartSection.style.opacity = "1";
+    cartArea.style.transform = "translateX(0px)";
+  }, 1);
+}
 
-cartExitIcon.addEventListener("click", function () {
+function hideCart() {
   cartArea.style.transform = "translateX(30px)";
   cartSection.style.opacity = "0";
   setTimeout(function () {
     cartSection.style.display = "none";
   }, 500);
+}
+
+addToCartBtn.forEach((cartBtn) => {
+  cartBtn.addEventListener("click", showCart);
 });
+
+shoppingCartIcon.forEach((cartIcon) => {
+  cartIcon.addEventListener("click", showCart);
+});
+
+cartExitIcon.addEventListener("click", hideCart);
 
 document.addEventListener("click", function (event) {
   const target = event.target;
   if (
     target === emptyCartBtn ||
     (!cartArea.contains(target) && target !== shoppingCartIcon[0])
-  ) {
-    cartArea.style.transform = "translateX(30px)";
-    cartSection.style.opacity = "0";
-    setTimeout(function () {
-      cartSection.style.display = "none";
-    }, 500);
-  }
+  )
+    if (
+      target === emptyCartBtn ||
+      (!cartArea.contains(target) && target !== addToCartBtn[0])
+    ) {
+      hideCart();
+    }
 });
 
 window.addEventListener("load", function () {
