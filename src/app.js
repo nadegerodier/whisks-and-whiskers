@@ -102,9 +102,13 @@ document.addEventListener("click", function (event) {
     if (
       target === emptyCartBtn ||
       (!cartArea.contains(target) && target !== addToCartBtn[0])
-    ) {
-      hideCart();
-    }
+    )
+      if (
+        target === emptyCartBtn ||
+        (!cartArea.contains(target) && !target.classList.contains("trash-can"))
+      ) {
+        hideCart();
+      }
 });
 
 window.addEventListener("load", function () {
