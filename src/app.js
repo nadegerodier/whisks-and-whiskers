@@ -336,3 +336,10 @@ function updateCartCount() {
     cartCountNavbarElement.innerHTML = ` ${itemsCount}`;
   }
 }
+
+const checkoutBtn = document.querySelectorAll(".btn-checkout");
+checkoutBtn.forEach((Btn) => {
+  Btn.addEventListener("click", function (event) {
+    alert("Checkout is disabled on this site");
+  });
+});
