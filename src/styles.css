@@ -146,6 +146,7 @@ section.cart .btn-empty-cart:hover {
 
 section.cart .cart-item {
   border-bottom: 1px solid #e4e9ec;
+  transition: opacity 150ms ease-in-out;
 }
 
 section.cart .cart-item:last-child {

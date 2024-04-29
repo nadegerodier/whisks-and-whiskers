@@ -265,18 +265,25 @@ function changeQuantity() {
 
 function removeItem() {
   const cartItemElement = this.closest(".cart-item");
+  cartItemElement.style.opacity = "0.4";
+  setTimeout(function () {
+    cartItemElement.remove();
+    loadContent();
+  }, 500);
+
   const bakingClassName =
     cartItemElement.querySelector(".baking-class-name").innerHTML;
   cartItemsList = cartItemsList.filter(
     (el) => el.bakingClassName != bakingClassName
   );
-  cartItemElement.remove();
+  saveCartToLocalStorage();
 
   const cartFooter = document.querySelector(".cart-footer");
   const cartContentElement = document.querySelector(".cart-content");
   if (cartItemsList.length === 0) {
-    cartFooter.classList.add("d-none");
-    cartContentElement.innerHTML = `<div
+    setTimeout(function () {
+      cartFooter.classList.add("d-none");
+      cartContentElement.innerHTML = `<div
                 class="empty-cart d-flex flex-column justify-content-center align-items-center"
               >
                 <div class="empty-cart-message">
@@ -286,10 +293,8 @@ function removeItem() {
                   >Shop our classes</a
                 >
               </div>`;
+    }, 500);
   }
-
-  loadContent();
-  saveCartToLocalStorage();
 }
 
 function updateTotalCost() {
