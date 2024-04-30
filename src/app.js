@@ -348,3 +348,13 @@ checkoutBtn.forEach((Btn) => {
     alert("Checkout is disabled on this site");
   });
 });
+
+const thumbnailImages = document.querySelectorAll(".thumbnail");
+thumbnailImages.forEach((thumbnail) => {
+  thumbnail.addEventListener("click", function () {
+    const mainImageElement = thumbnail
+      .closest(".col")
+      .querySelector(".main-img");
+    mainImageElement.src = thumbnail.src;
+  });
+});
