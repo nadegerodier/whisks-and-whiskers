@@ -429,14 +429,14 @@ footer a:hover {
 
 .class-page h4 {
   font-family: "Cormorant Upright", serif;
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 500;
   text-transform: uppercase;
 }
 
 .class-page div.class-price {
   font-family: "Manrope", sans-serif;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .class-page span.current-price {
