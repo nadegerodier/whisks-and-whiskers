@@ -351,7 +351,7 @@ checkoutBtn.forEach((Btn) => {
 
 const thumbnailImages = document.querySelectorAll(".thumbnail");
 thumbnailImages.forEach((thumbnail) => {
-  thumbnail.addEventListener("click", function () {
+  thumbnail.addEventListener("mouseover", function () {
     const mainImageElement = thumbnail
       .closest(".col")
       .querySelector(".main-img");
