@@ -3,7 +3,7 @@
   --off-black: #303030;
   --off-white: #fffdfb;
   --primary-color: #e26a6b;
-  --secondary-color: #1a5183;
+  --secondary-color: #e4a08f;
 }
 
 * {
@@ -72,6 +72,17 @@ section {
 section .content {
   margin: 0 auto;
   max-width: 1600px;
+}
+
+section h3 {
+  font-family: "Cormorant Upright", serif;
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0;
+}
+
+section h4 {
+  margin-bottom: 0;
 }
 
 section.cart {
@@ -232,17 +243,6 @@ section.hero h2 {
   font-size: 75px;
 }
 
-section h3 {
-  font-family: "Cormorant Upright", serif;
-  font-size: 60px;
-  font-weight: 700;
-  margin: 0;
-}
-
-section h4 {
-  margin-bottom: 0;
-}
-
 section.about-us {
   background-color: var(--branding-color);
   color: var(--off-black);
@@ -275,7 +275,7 @@ section.about-us img {
 }
 
 section.classes {
-  background-color: rgb(64, 119, 170);
+  background-color: var(--secondary-color);
   color: var(--off-white);
 }
 
@@ -283,7 +283,7 @@ section.classes .grid {
   display: grid;
   grid-gap: 40px;
   grid-template-columns: repeat(4, 1fr);
-  padding: 20px 40px;
+  padding: 10px 0;
 }
 
 section.classes .class-card {
@@ -308,21 +308,28 @@ section.classes h4 {
   text-transform: uppercase;
 }
 
+section.classes h5 {
+  color: var(--off-black);
+  font-size: 18px;
+  opacity: 0.7;
+}
+
 section.classes .btn-class {
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   color: var(--off-white);
   font-size: 18px;
   margin: 20px 20px 5px;
   padding: 8px 20px;
   transition: all 200ms ease-in-out;
+  opacity: 0.9;
 }
 
 section.classes .btn-class:hover {
   background-color: var(--off-white);
   border-color: var(--off-white);
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 section.testimonials {
