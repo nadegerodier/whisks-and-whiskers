@@ -350,11 +350,20 @@ checkoutBtn.forEach((Btn) => {
 });
 
 const thumbnailImages = document.querySelectorAll(".thumbnail");
+
+function addClassActive(currentThumbnail) {
+  thumbnailImages.forEach((thumbnail) => {
+    thumbnail.classList.remove("active");
+  });
+  currentThumbnail.classList.add("active");
+}
+
 thumbnailImages.forEach((thumbnail) => {
   thumbnail.addEventListener("mouseover", function () {
     const mainImageElement = thumbnail
       .closest(".col")
       .querySelector(".main-img");
     mainImageElement.src = thumbnail.src;
+    addClassActive(this);
   });
 });
