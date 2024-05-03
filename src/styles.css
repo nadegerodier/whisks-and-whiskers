@@ -216,7 +216,7 @@ section.cart .btn-checkout:hover {
 section.hero {
   align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
-    url(/images/Pic1.jpg);
+    url(/images/pic_1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
