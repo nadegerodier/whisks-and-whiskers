@@ -423,7 +423,7 @@ footer a:hover {
 
 .class-page img.main-img {
   display: block;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 .class-page img.thumbnail {
@@ -574,6 +574,17 @@ footer a:hover {
   section.testimonials .carousel-inner {
     padding: 50px 200px 100px;
   }
+
+  .class-page .class-image {
+    margin: 50px auto;
+    max-width: 700px;
+  }
+
+  .class-page h4,
+  .class-price,
+  .class-discount {
+    text-align: center;
+  }
 }
 
 @media (max-width: 992px) {
@@ -709,6 +720,14 @@ footer a:hover {
   section.testimonials h5 {
     font-size: 18px;
   }
+
+  .class-page h4 {
+    font-size: 36px;
+  }
+
+  .class-page .class-price {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -750,6 +769,18 @@ footer a:hover {
 
   footer {
     font-size: 18px;
+  }
+
+  .class-page h4 {
+    font-size: 32px;
+  }
+
+  .class-page .class-price {
+    font-size: 18px;
+  }
+
+  .class-page div.class-discount {
+    font-size: 16px;
   }
 }
 

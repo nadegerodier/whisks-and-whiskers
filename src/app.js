@@ -344,7 +344,7 @@ function updateCartCount() {
 
 const checkoutBtn = document.querySelectorAll(".btn-checkout");
 checkoutBtn.forEach((Btn) => {
-  Btn.addEventListener("click", function (event) {
+  Btn.addEventListener("click", function () {
     alert("Checkout is disabled on this site");
   });
 });
@@ -361,7 +361,7 @@ function addClassActive(currentThumbnail) {
 thumbnailImages.forEach((thumbnail) => {
   thumbnail.addEventListener("mouseover", function () {
     const mainImageElement = thumbnail
-      .closest(".col")
+      .closest(".col-xl-6")
       .querySelector(".main-img");
     mainImageElement.src = thumbnail.src;
     addClassActive(this);
