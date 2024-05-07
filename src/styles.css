@@ -828,7 +828,7 @@ footer a:hover {
 
 @media (max-width: 420px) {
   section.cart h3 {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   section.cart h5 {
@@ -856,14 +856,6 @@ footer a:hover {
   }
 
   section.cart .btn-checkout {
-    font-size: 16px;
-  }
-
-  section.cart .empty-cart-message {
-    font-size: 16px;
-  }
-
-  section.cart .btn-empty-cart {
     font-size: 16px;
   }
 
@@ -896,10 +888,6 @@ footer a:hover {
 @media (max-width: 380px) {
   section {
     padding: 50px 20px;
-  }
-
-  section.cart .item-price {
-    font-size: 14px;
   }
 
   section.testimonials .carousel-inner {
