@@ -251,6 +251,7 @@ section.about-us {
 
 section.about-us p {
   font-size: 20px;
+  text-align: justify;
 }
 
 section.about-us .btn-branding {
