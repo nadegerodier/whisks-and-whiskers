@@ -499,10 +499,12 @@ footer a:hover {
 }
 
 .class-page .btn-participants-count {
+  align-content: center;
   border-color: lightgray;
   color: var(--off-black);
   cursor: auto;
   font-size: 18px;
+  height: 45px;
   margin: 20px;
   padding: 7px 20px;
 }
@@ -518,11 +520,12 @@ footer a:hover {
 }
 
 .class-page .btn-add-to-cart {
+  align-content: center;
   background-color: var(--primary-color);
   border-color: var(--primary-color);
-  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
   color: var(--off-white);
   font-size: 18px;
+  height: 45px;
   margin: 20px;
   padding: 8px 60px;
   transition: all 200ms ease-in-out;
@@ -937,6 +940,7 @@ footer a:hover {
   }
 
   .class-page .btn-participants-count {
+    height: 40px;
     margin: 10px;
   }
 
@@ -945,6 +949,7 @@ footer a:hover {
   }
 
   .class-page .btn-add-to-cart {
+    height: 40px;
     margin: 10px;
     padding: 8px 30px;
   }
