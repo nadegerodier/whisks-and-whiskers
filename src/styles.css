@@ -520,7 +520,7 @@ footer a:hover {
 .class-page .btn-add-to-cart {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
   color: var(--off-white);
   font-size: 18px;
   margin: 20px;
@@ -530,7 +530,7 @@ footer a:hover {
 
 .class-page .btn-add-to-cart:hover {
   background-color: var(--off-white);
-  border-color: var(--off-white);
+  border-color: var(--primary-color);
   color: var(--primary-color);
 }
 
