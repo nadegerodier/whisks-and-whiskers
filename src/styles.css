@@ -731,6 +731,42 @@ footer a:hover {
 }
 
 @media (max-width: 576px) {
+  section.cart h3 {
+    font-size: 32px;
+  }
+
+  section.cart h5 {
+    font-size: 18px;
+  }
+
+  section.cart .item-price {
+    font-size: 18px;
+  }
+
+  section.cart .trash-can {
+    font-size: 16px;
+  }
+
+  section.cart h6 {
+    font-size: 20px;
+  }
+
+  section.cart .total-cost {
+    font-size: 20px;
+  }
+
+  section.cart .btn-checkout {
+    font-size: 18px;
+  }
+
+  section.cart .empty-cart-message {
+    font-size: 18px;
+  }
+
+  section.cart .btn-empty-cart {
+    font-size: 18px;
+  }
+
   section.hero h2 {
     font-size: 45px;
   }
@@ -784,7 +820,53 @@ footer a:hover {
   }
 }
 
+@media (max-width: 500px) {
+  section.cart .cart-area {
+    width: 100vw;
+  }
+}
+
 @media (max-width: 420px) {
+  section.cart h3 {
+    font-size: 28px;
+  }
+
+  section.cart h5 {
+    font-size: 16px;
+  }
+
+  section.cart .item-price {
+    font-size: 16px;
+  }
+
+  section.cart .quantity {
+    font-size: 14px;
+  }
+
+  section.cart .trash-can {
+    font-size: 14px;
+  }
+
+  section.cart h6 {
+    font-size: 18px;
+  }
+
+  section.cart .total-cost {
+    font-size: 18px;
+  }
+
+  section.cart .btn-checkout {
+    font-size: 16px;
+  }
+
+  section.cart .empty-cart-message {
+    font-size: 16px;
+  }
+
+  section.cart .btn-empty-cart {
+    font-size: 16px;
+  }
+
   section.about-us .btn-branding {
     margin: 10px;
     padding: 8px 10px;
@@ -814,6 +896,10 @@ footer a:hover {
 @media (max-width: 380px) {
   section {
     padding: 50px 20px;
+  }
+
+  section.cart .item-price {
+    font-size: 14px;
   }
 
   section.testimonials .carousel-inner {

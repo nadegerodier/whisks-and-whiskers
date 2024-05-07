@@ -214,16 +214,16 @@ function addToCart(item) {
   const cartContentElement = document.querySelector(".cart-content");
   const cartItemHTML = `<div class="cart-item pt-4 pb-4">
         <div class="row">
-          <div class="col-3">
+          <div class="col-2 col-sm-3">
             <img
               src=${item.bakingClassImageURL}
               alt="baking class preview"
               class="img-fluid rounded"
             />
           </div>
-          <div class="col-6 ps-0">
+          <div class="col-7 col-sm-6 ps-0">
             <h5 class="baking-class-name pt-1">${item.bakingClassName}</h5>
-            <div class="pt-2">
+            <div class="quantity pt-2">
               Quantity:
               <input
                 class="item-quantity text-center"
