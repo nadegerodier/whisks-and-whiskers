@@ -468,6 +468,10 @@ footer a:hover {
   font-size: 18px;
 }
 
+.class-page div.class-description {
+  text-align: justify;
+}
+
 .class-page div.dropdown-name-area {
   cursor: pointer;
 }
@@ -729,7 +733,7 @@ footer a:hover {
     font-size: 36px;
   }
 
-  .class-page .class-price {
+  .class-page div.class-price {
     font-size: 20px;
   }
 }
@@ -749,6 +753,23 @@ footer a:hover {
 
   section.classes .btn-class {
     font-size: 14px;
+  }
+
+  .class-page h4 {
+    font-size: 32px;
+  }
+
+  .class-page div.class-discount {
+    font-size: 16px;
+  }
+
+  .class-page .btn-participants-count {
+    font-size: 16px;
+  }
+
+  .class-page .btn-add-to-cart {
+    font-size: 16px;
+    padding: 8px 50px;
   }
 }
 
@@ -846,15 +867,31 @@ footer a:hover {
   }
 
   .class-page h4 {
-    font-size: 32px;
+    font-size: 30px;
   }
 
-  .class-page .class-price {
+  .class-page div.class-price {
     font-size: 18px;
   }
 
   .class-page div.class-discount {
-    font-size: 16px;
+    font-size: 15px;
+  }
+
+  .class-page .btn-participants-count {
+    font-size: 15px;
+    margin: 15px;
+    padding: 8px 15px;
+  }
+
+  .class-page .participants-quantity {
+    width: 40px;
+  }
+
+  .class-page .btn-add-to-cart {
+    font-size: 15px;
+    margin: 15px;
+    padding: 8px 40px;
   }
 }
 
@@ -894,6 +931,23 @@ footer a:hover {
   section.testimonials {
     padding: 50px 0;
   }
+
+  .class-page h4 {
+    font-size: 28px;
+  }
+
+  .class-page .btn-participants-count {
+    margin: 10px;
+  }
+
+  .class-page .participants-quantity {
+    width: 30px;
+  }
+
+  .class-page .btn-add-to-cart {
+    margin: 10px;
+    padding: 8px 30px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -911,6 +965,10 @@ footer a:hover {
 
   section.cart .quantity {
     font-size: 14px;
+  }
+
+  section.cart .item-quantity {
+    width: 40px;
   }
 
   section.cart h6 {
@@ -973,6 +1031,22 @@ footer a:hover {
   footer {
     font-size: 16px;
   }
+
+  .class-page div.class-description {
+    font-size: 15px;
+  }
+
+  .class-page div.dropdown-text {
+    font-size: 15px;
+  }
+
+  .class-page .btn-participants-count {
+    margin: 8px;
+  }
+
+  .class-page .btn-add-to-cart {
+    margin: 8px;
+  }
 }
 
 @media (max-width: 380px) {
@@ -990,5 +1064,31 @@ footer a:hover {
 
   section.testimonials .carousel-inner {
     padding: 30px 50px 100px;
+  }
+
+  .class-page h4 {
+    font-size: 24px;
+  }
+
+  .class-page div.class-price {
+    font-size: 16px;
+  }
+
+  .class-page div.class-discount {
+    font-size: 14px;
+  }
+
+  .class-page .btn-participants-count {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .class-page .participants-quantity {
+    width: 25px;
+  }
+
+  .class-page .btn-add-to-cart {
+    font-size: 14px;
+    padding: 8px 25px;
   }
 }
