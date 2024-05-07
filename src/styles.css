@@ -285,13 +285,14 @@ section.classes .grid {
   display: grid;
   grid-gap: 40px;
   grid-template-columns: repeat(4, 1fr);
-  padding: 10px 0;
+  margin: 0 auto;
+  padding: 10px 0 50px;
 }
 
 section.classes .class-card {
   background-color: var(--off-white);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 30px;
 }
 
@@ -541,7 +542,7 @@ footer a:hover {
 @media (max-width: 1500px) {
   section.classes .grid {
     grid-template-columns: repeat(2, 1fr);
-    padding: 10px 180px 50px;
+    max-width: 1050px;
   }
 
   section.classes .class-card {
@@ -557,21 +558,7 @@ footer a:hover {
   }
 }
 
-@media (max-width: 1400px) {
-  section.classes .grid {
-    padding: 10px 150px 50px;
-  }
-}
-
 @media (max-width: 1200px) {
-  section {
-    padding: 50px;
-  }
-
-  section.classes .grid {
-    padding: 10px 80px 50px;
-  }
-
   section.testimonials .carousel-inner {
     padding: 50px 200px 100px;
   }
@@ -590,12 +577,11 @@ footer a:hover {
 
 @media (max-width: 992px) {
   section {
-    padding: 50px 30px;
+    padding: 50px;
   }
 
   section.classes .grid {
     grid-gap: 30px;
-    padding: 10px 50px 50px;
   }
 
   section.classes .class-card {
@@ -628,8 +614,17 @@ footer a:hover {
     font-size: 18px;
   }
 
-  section.classes .grid {
-    padding: 10px 30px 50px;
+  section.classes h4 {
+    font-size: 20px;
+  }
+
+  section.classes h5 {
+    font-size: 16px;
+  }
+
+  section.classes .btn-class {
+    font-size: 16px;
+    margin: 10px 10px 5px;
   }
 
   section.testimonials .carousel-inner {
@@ -668,6 +663,10 @@ footer a:hover {
     width: 24px;
   }
 
+  section {
+    padding: 50px 40px;
+  }
+
   section.hero h2 {
     font-size: 55px;
   }
@@ -686,7 +685,6 @@ footer a:hover {
 
   section.classes .grid {
     grid-gap: 25px;
-    padding: 10px 0 50px;
   }
 
   section.classes .class-card {
@@ -694,15 +692,15 @@ footer a:hover {
   }
 
   section.classes h4 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   section.classes h5 {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   section.classes .btn-class {
-    font-size: 16px;
+    font-size: 15px;
     margin: 10px 10px 5px;
   }
 
@@ -728,6 +726,24 @@ footer a:hover {
 
   .class-page .class-price {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  section.classes .class-card {
+    padding: 15px;
+  }
+
+  section.classes h4 {
+    font-size: 16px;
+  }
+
+  section.classes h5 {
+    font-size: 14px;
+  }
+
+  section.classes .btn-class {
+    font-size: 14px;
   }
 }
 
@@ -768,6 +784,10 @@ footer a:hover {
     font-size: 18px;
   }
 
+  section {
+    padding: 50px 30px;
+  }
+
   section.hero h2 {
     font-size: 45px;
   }
@@ -780,8 +800,16 @@ footer a:hover {
     grid-gap: 20px;
   }
 
-  section.classes .class-card {
-    padding: 15px;
+  section.classes h4 {
+    font-size: 15px;
+  }
+
+  section.classes h5 {
+    font-size: 13px;
+  }
+
+  section.classes .btn-class {
+    font-size: 13px;
   }
 
   section.testimonials .carousel-inner {
@@ -825,6 +853,34 @@ footer a:hover {
   section.cart .cart-area {
     width: 100vw;
   }
+
+  section {
+    padding: 50px 20px;
+  }
+
+  section.classes .grid {
+    grid-gap: 10px;
+  }
+
+  section.classes .class-card {
+    padding: 10px;
+  }
+
+  section.classes img:hover {
+    transform: scale(1.05);
+  }
+
+  section.classes h4 {
+    font-size: 14px;
+  }
+
+  section.classes h5 {
+    font-size: 13px;
+  }
+
+  section.classes .btn-class {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -856,9 +912,33 @@ footer a:hover {
     font-size: 16px;
   }
 
+  section {
+    padding: 50px 15px;
+  }
+
   section.about-us .btn-branding {
     margin: 10px;
     padding: 8px 10px;
+  }
+
+  section.classes .grid {
+    grid-gap: 8px;
+  }
+
+  section.classes .class-card {
+    padding: 8px;
+  }
+
+  section.classes h4 {
+    font-size: 13px;
+  }
+
+  section.classes h5 {
+    font-size: 12px;
+  }
+
+  section.classes .btn-class {
+    font-size: 12px;
   }
 
   section.testimonials .carousel-inner {
@@ -883,8 +963,16 @@ footer a:hover {
 }
 
 @media (max-width: 380px) {
-  section {
-    padding: 50px 20px;
+  section.classes h4 {
+    font-size: 12px;
+  }
+
+  section.classes h5 {
+    font-size: 11px;
+  }
+
+  section.classes .btn-class {
+    font-size: 11px;
   }
 
   section.testimonials .carousel-inner {
