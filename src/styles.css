@@ -504,7 +504,7 @@ footer a:hover {
   cursor: auto;
   font-size: 18px;
   margin: 20px;
-  padding: 8px 20px;
+  padding: 7px 20px;
 }
 
 .class-page .btn-participants-count:active {
@@ -885,7 +885,7 @@ footer a:hover {
   .class-page .btn-participants-count {
     font-size: 15px;
     margin: 15px;
-    padding: 8px 15px;
+    padding: 7px 15px;
   }
 
   .class-page .participants-quantity {
@@ -1072,7 +1072,7 @@ footer a:hover {
 
   .class-page .btn-participants-count {
     font-size: 14px;
-    padding: 8px 12px;
+    padding: 7px 12px;
   }
 
   .class-page .participants-quantity {
