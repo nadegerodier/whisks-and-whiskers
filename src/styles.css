@@ -705,6 +705,10 @@ footer a:hover {
     margin: 10px 10px 5px;
   }
 
+  section.testimonials {
+    padding: 50px 20px;
+  }
+
   section.testimonials .testimonials-card {
     padding: 30px;
   }
@@ -813,8 +817,12 @@ footer a:hover {
     font-size: 13px;
   }
 
+  section.testimonials {
+    padding: 50px 10px;
+  }
+
   section.testimonials .carousel-inner {
-    padding: 40px 80px 100px;
+    padding: 40px 70px 100px;
   }
 
   section.testimonials .testimonials-card {
@@ -882,6 +890,10 @@ footer a:hover {
   section.classes .btn-class {
     font-size: 13px;
   }
+
+  section.testimonials {
+    padding: 50px 0;
+  }
 }
 
 @media (max-width: 420px) {
@@ -943,7 +955,7 @@ footer a:hover {
   }
 
   section.testimonials .carousel-inner {
-    padding: 30px 50px 100px;
+    padding: 30px 60px 100px;
   }
 
   section.testimonials .fa-quote {
@@ -977,6 +989,6 @@ footer a:hover {
   }
 
   section.testimonials .carousel-inner {
-    padding: 30px 40px 100px;
+    padding: 30px 50px 100px;
   }
 }
