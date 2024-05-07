@@ -222,7 +222,7 @@ function addToCart(item) {
             />
           </div>
           <div class="col-7 col-sm-6 ps-0">
-            <h5 class="baking-class-name pt-1">${item.bakingClassName}</h5>
+            <h5 class="baking-class-name">${item.bakingClassName}</h5>
             <div class="quantity pt-2">
               Quantity:
               <input

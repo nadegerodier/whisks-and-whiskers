@@ -165,6 +165,7 @@ section.cart .unit-cost {
 section.cart .item-price {
   font-family: "Manrope", sans-serif;
   font-size: 20px;
+  line-height: 1.2;
 }
 
 section.cart .item-quantity {
@@ -840,10 +841,6 @@ footer a:hover {
   }
 
   section.cart .quantity {
-    font-size: 14px;
-  }
-
-  section.cart .trash-can {
     font-size: 14px;
   }
 
