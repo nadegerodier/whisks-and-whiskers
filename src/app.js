@@ -214,7 +214,7 @@ function addToCart(item) {
   const cartContentElement = document.querySelector(".cart-content");
   const cartItemHTML = `<div class="cart-item pt-4 pb-4">
         <div class="row">
-          <div class="col-2 col-sm-3 d-flex align-items-center">
+          <div class="col-2 col-sm-3 d-sm-flex align-items-center">
             <img
               src=${item.bakingClassImageURL}
               alt="baking class preview"
