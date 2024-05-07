@@ -786,6 +786,10 @@ footer a:hover {
     font-size: 18px;
   }
 
+  section.cart .item-quantity {
+    width: 40px;
+  }
+
   section.cart .trash-can {
     font-size: 16px;
   }
@@ -932,10 +936,6 @@ footer a:hover {
     padding: 50px 0;
   }
 
-  .class-page h4 {
-    font-size: 28px;
-  }
-
   .class-page .btn-participants-count {
     margin: 10px;
   }
@@ -965,10 +965,6 @@ footer a:hover {
 
   section.cart .quantity {
     font-size: 14px;
-  }
-
-  section.cart .item-quantity {
-    width: 40px;
   }
 
   section.cart h6 {
@@ -1032,6 +1028,10 @@ footer a:hover {
     font-size: 16px;
   }
 
+  .class-page h4 {
+    font-size: 28px;
+  }
+
   .class-page div.class-description {
     font-size: 15px;
   }
@@ -1064,14 +1064,6 @@ footer a:hover {
 
   section.testimonials .carousel-inner {
     padding: 30px 50px 100px;
-  }
-
-  .class-page h4 {
-    font-size: 24px;
-  }
-
-  .class-page div.class-price {
-    font-size: 16px;
   }
 
   .class-page div.class-discount {
