@@ -2,6 +2,17 @@ const navLinks = document.querySelectorAll(".nav-link");
 const sections = document.querySelectorAll("section");
 const navbar = document.getElementById("nav");
 
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    const navbarCollapse = document.querySelector(".navbar-collapse");
+    const isNavbarOpen = navbarCollapse.classList.contains("show");
+    if (isNavbarOpen) {
+      const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+      bsCollapse.hide();
+    }
+  });
+});
+
 function makeActive(currentLink) {
   navLinks.forEach((link) => {
     link.classList.remove("nav-link-active");
@@ -16,7 +27,7 @@ navLinks.forEach((link) => {
 });
 
 const options = {
-  threshold: 0.7, // Trigger when section is 70% visible
+  threshold: 0.4, // Trigger when section is 40% visible
 };
 
 const observer = new IntersectionObserver((entries, observer) => {
