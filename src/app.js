@@ -13,6 +13,19 @@ navLinks.forEach((link) => {
   });
 });
 
+document.addEventListener("click", function (event) {
+  const target = event.target;
+  const navbarArea = document.querySelectorAll(".navbar");
+  const navbarCollapse = document.querySelector(".navbar-collapse");
+  const isNavbarOpen = navbarCollapse.classList.contains("show");
+  navbarArea.forEach((navbar) => {
+    if (isNavbarOpen && target !== navbar) {
+      const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+      bsCollapse.hide();
+    }
+  });
+});
+
 function makeActive(currentLink) {
   navLinks.forEach((link) => {
     link.classList.remove("nav-link-active");
