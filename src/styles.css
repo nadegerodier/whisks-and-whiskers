@@ -267,7 +267,7 @@ section.about-us .btn-branding {
 
 section.about-us .btn-branding:hover {
   background-color: var(--branding-color);
-  border-color: var(--off-black);
+  box-shadow: none;
   color: var(--off-black);
 }
 
@@ -332,7 +332,7 @@ section.classes .btn-class {
 
 section.classes .btn-class:hover {
   background-color: var(--off-white);
-  border-color: var(--off-white);
+  box-shadow: none;
   color: var(--primary-color);
 }
 
