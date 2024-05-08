@@ -388,6 +388,7 @@ thumbnailImages.forEach((thumbnail) => {
       .closest(".col-xl-6")
       .querySelector(".main-img");
     mainImageElement.src = thumbnail.src;
+    mainImageElement.alt = thumbnail.alt;
     addClassActive(this);
   });
 });
