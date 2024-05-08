@@ -257,7 +257,6 @@ section.about-us p {
 section.about-us .btn-branding {
   background-color: var(--off-black);
   border-color: var(--off-black);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   color: var(--branding-color);
   font-size: 20px;
   margin: 20px;
@@ -267,14 +266,13 @@ section.about-us .btn-branding {
 
 section.about-us .btn-branding:hover {
   background-color: var(--branding-color);
-  box-shadow: none;
   color: var(--off-black);
 }
 
 section.about-us .img-container {
   display: block;
   margin: 0 auto;
-  max-width: 750px;
+  max-width: 80%;
 }
 
 section.classes {
@@ -586,6 +584,11 @@ footer a:hover {
 @media (max-width: 992px) {
   section {
     padding: 50px;
+  }
+
+  section.about-us,
+  section.testimonials {
+    min-height: fit-content;
   }
 
   section.classes .grid {
