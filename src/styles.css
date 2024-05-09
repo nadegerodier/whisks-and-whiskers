@@ -254,7 +254,7 @@ section.hero #felines-word::after {
   animation: herolastword 25s infinite;
   content: "felines";
   display: inline-block;
-  padding-left: 2px;
+  padding-left: 3px;
 }
 
 @keyframes herowordchange {
