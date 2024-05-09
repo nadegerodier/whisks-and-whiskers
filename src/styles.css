@@ -238,93 +238,137 @@ section.hero #invisible-word {
 }
 
 section.hero #rotating-word::after {
-  animation: anim1 2.5s 1, anim2 2.5s 2.5s 1, anim3 2.5s 5s 1, anim4 2.5s 7.5s 1;
+  animation: anim 16s 1;
   content: "modern felines";
   position: absolute;
 }
 
-@keyframes anim1 {
+section.hero #felines-word::after {
+  animation: anim2 16s 1;
+  content: "felines";
+}
+
+@keyframes anim {
   0% {
+    color: var(--branding-color);
+    content: "modern felines";
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  2% {
+    color: var(--branding-color);
+    content: "modern felines";
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  10% {
+    color: var(--branding-color);
+    content: "modern felines";
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  12% {
     color: var(--primary-color);
     content: "curious";
     opacity: 0;
     transform: translateY(0px);
   }
 
-  50% {
+  20% {
     color: var(--primary-color);
     content: "curious";
     opacity: 1;
     transform: translateY(0px);
   }
 
-  100% {
+  31% {
     color: var(--primary-color);
     content: "curious";
     opacity: 0;
     transform: translateY(30px);
+  }
+
+  33% {
+    color: var(--primary-color);
+    content: "confident";
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  41% {
+    color: var(--primary-color);
+    content: "confident";
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  52% {
+    color: var(--primary-color);
+    content: "confident";
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  54% {
+    color: var(--primary-color);
+    content: "sophisticated";
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  62% {
+    color: var(--primary-color);
+    content: "sophisticated";
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  73% {
+    color: var(--primary-color);
+    content: "sophisticated";
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  75% {
+    color: var(--primary-color);
+    content: "modern";
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  83% {
+    color: var(--primary-color);
+    content: "modern";
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  100% {
+    color: var(--branding-color);
+    content: "modern";
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 
 @keyframes anim2 {
   0% {
-    color: var(--primary-color);
-    content: "confident";
+    content: "felines";
     opacity: 0;
-    transform: translateY(0px);
   }
 
-  50% {
-    color: var(--primary-color);
-    content: "confident";
-    opacity: 1;
-    transform: translateY(0px);
+  83% {
+    content: "felines";
+    opacity: 0;
   }
 
   100% {
-    color: var(--primary-color);
-    content: "confident";
-    opacity: 0;
-    transform: translateY(30px);
-  }
-}
-
-@keyframes anim3 {
-  0% {
-    color: var(--primary-color);
-    content: "sophisticated";
-    opacity: 0;
-    transform: translateY(0px);
-  }
-
-  50% {
-    color: var(--primary-color);
-    content: "sophisticated";
+    content: "felines";
     opacity: 1;
-    transform: translateY(0px);
-  }
-
-  100% {
-    color: var(--primary-color);
-    content: "sophisticated";
-    opacity: 0;
-    transform: translateY(30px);
-  }
-}
-
-@keyframes anim4 {
-  0% {
-    color: var(--primary-color);
-    content: "modern felines";
-    opacity: 0;
-    transform: translateY(0px);
-  }
-
-  70% {
-    color: var(--branding-color);
-    content: "modern felines";
-    opacity: 1;
-    transform: translateY(0px);
   }
 }
 
