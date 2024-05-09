@@ -276,7 +276,7 @@ section.hero #felines-word::after {
     color: var(--branding-color);
     content: "modern";
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
 
   8% {
@@ -297,7 +297,7 @@ section.hero #felines-word::after {
     color: var(--primary-color);
     content: "curious";
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
 
   22% {
@@ -318,7 +318,7 @@ section.hero #felines-word::after {
     color: var(--primary-color);
     content: "confident";
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
 
   36% {
@@ -339,7 +339,7 @@ section.hero #felines-word::after {
     color: var(--primary-color);
     content: "sophisticated";
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
 
   50% {
@@ -387,7 +387,7 @@ section.hero #felines-word::after {
   6% {
     content: "felines";
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
 
   55% {
