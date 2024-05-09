@@ -233,6 +233,12 @@ section.hero h2 {
   font-size: 75px;
 }
 
+section.hero .h2-break1,
+.h2-break2,
+.h2-break3 {
+  display: none;
+}
+
 section.hero #invisible-word {
   opacity: 0;
 }
@@ -697,6 +703,10 @@ footer a:hover {
 }
 
 @media (max-width: 1500px) {
+  section.hero .h2-break1 {
+    display: inline;
+  }
+
   section.classes .grid {
     grid-template-columns: repeat(2, 1fr);
     max-width: 1050px;
@@ -737,6 +747,10 @@ footer a:hover {
     padding: 50px;
   }
 
+  section.hero h2 {
+    font-size: 65px;
+  }
+
   section.about-us,
   section.testimonials {
     min-height: fit-content;
@@ -761,7 +775,7 @@ footer a:hover {
 
 @media (max-width: 850px) {
   section.hero h2 {
-    font-size: 65px;
+    font-size: 60px;
   }
 
   section h3 {
@@ -830,7 +844,7 @@ footer a:hover {
   }
 
   section.hero h2 {
-    font-size: 55px;
+    font-size: 50px;
   }
 
   section h3 {
@@ -896,6 +910,10 @@ footer a:hover {
 }
 
 @media (max-width: 650px) {
+  section.hero h2 {
+    font-size: 45px;
+  }
+
   section.classes .class-card {
     padding: 15px;
   }
@@ -975,8 +993,13 @@ footer a:hover {
     padding: 50px 30px;
   }
 
-  section.hero h2 {
-    font-size: 45px;
+  section.hero .h2-break1 {
+    display: none;
+  }
+
+  section.hero .h2-break2,
+  .h2-break3 {
+    display: inline;
   }
 
   section h3 {
@@ -1209,6 +1232,10 @@ footer a:hover {
 }
 
 @media (max-width: 380px) {
+  section.hero h2 {
+    font-size: 40px;
+  }
+
   section.classes h4 {
     font-size: 12px;
   }
