@@ -371,6 +371,11 @@ section.hero #felines-word::after {
 @keyframes herolastword {
   0% {
     content: "felines";
+    opacity: 1;
+  }
+
+  2% {
+    content: "felines";
     opacity: 0;
   }
 
@@ -1232,10 +1237,6 @@ footer a:hover {
 }
 
 @media (max-width: 380px) {
-  section.hero h2 {
-    font-size: 40px;
-  }
-
   section.classes h4 {
     font-size: 12px;
   }
@@ -1268,5 +1269,11 @@ footer a:hover {
   .class-page .btn-add-to-cart {
     font-size: 14px;
     padding: 8px 25px;
+  }
+}
+
+@media (max-width: 360px) {
+  section.hero h2 {
+    font-size: 40px;
   }
 }
