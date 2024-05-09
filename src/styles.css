@@ -238,17 +238,17 @@ section.hero #invisible-word {
 }
 
 section.hero #rotating-word::after {
-  animation: anim 16s 1;
+  animation: herowordchange 25s infinite;
   content: "modern felines";
   position: absolute;
 }
 
 section.hero #felines-word::after {
-  animation: anim2 16s 1;
+  animation: herolastword 25s infinite;
   content: "felines";
 }
 
-@keyframes anim {
+@keyframes herowordchange {
   0% {
     color: var(--branding-color);
     content: "modern felines";
@@ -256,92 +256,99 @@ section.hero #felines-word::after {
     transform: translateY(0px);
   }
 
-  2% {
+  1% {
     color: var(--branding-color);
     content: "modern felines";
     opacity: 1;
     transform: translateY(0px);
   }
 
-  10% {
+  6% {
     color: var(--branding-color);
     content: "modern felines";
     opacity: 0;
     transform: translateY(30px);
   }
 
-  12% {
+  8% {
     color: var(--primary-color);
     content: "curious";
     opacity: 0;
+    transform: translateY(0px);
+  }
+
+  13% {
+    color: var(--primary-color);
+    content: "curious";
+    opacity: 1;
     transform: translateY(0px);
   }
 
   20% {
     color: var(--primary-color);
     content: "curious";
-    opacity: 1;
-    transform: translateY(0px);
-  }
-
-  31% {
-    color: var(--primary-color);
-    content: "curious";
     opacity: 0;
     transform: translateY(30px);
   }
 
-  33% {
+  22% {
     color: var(--primary-color);
     content: "confident";
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  27% {
+    color: var(--primary-color);
+    content: "confident";
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  34% {
+    color: var(--primary-color);
+    content: "confident";
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  36% {
+    color: var(--primary-color);
+    content: "sophisticated";
     opacity: 0;
     transform: translateY(0px);
   }
 
   41% {
     color: var(--primary-color);
-    content: "confident";
-    opacity: 1;
-    transform: translateY(0px);
-  }
-
-  52% {
-    color: var(--primary-color);
-    content: "confident";
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  54% {
-    color: var(--primary-color);
-    content: "sophisticated";
-    opacity: 0;
-    transform: translateY(0px);
-  }
-
-  62% {
-    color: var(--primary-color);
     content: "sophisticated";
     opacity: 1;
     transform: translateY(0px);
   }
 
-  73% {
+  48% {
     color: var(--primary-color);
     content: "sophisticated";
     opacity: 0;
     transform: translateY(30px);
   }
 
-  75% {
+  50% {
     color: var(--primary-color);
     content: "modern";
     opacity: 0;
     transform: translateY(0px);
   }
 
-  83% {
+  55% {
     color: var(--primary-color);
+    content: "modern";
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  66% {
+    color: var(--branding-color);
     content: "modern";
     opacity: 1;
     transform: translateY(0px);
@@ -355,15 +362,20 @@ section.hero #felines-word::after {
   }
 }
 
-@keyframes anim2 {
+@keyframes herolastword {
   0% {
     content: "felines";
     opacity: 0;
   }
 
-  83% {
+  55% {
     content: "felines";
     opacity: 0;
+  }
+
+  72% {
+    content: "felines";
+    opacity: 1;
   }
 
   100% {
