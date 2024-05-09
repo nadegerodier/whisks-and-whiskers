@@ -233,6 +233,101 @@ section.hero h2 {
   font-size: 75px;
 }
 
+section.hero #invisible-word {
+  opacity: 0;
+}
+
+section.hero #rotating-word::after {
+  animation: anim1 2.5s 1, anim2 2.5s 2.5s 1, anim3 2.5s 5s 1, anim4 2.5s 7.5s 1;
+  content: "modern felines";
+  position: absolute;
+}
+
+@keyframes anim1 {
+  0% {
+    color: var(--primary-color);
+    content: "curious";
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  50% {
+    color: var(--primary-color);
+    content: "curious";
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  100% {
+    color: var(--primary-color);
+    content: "curious";
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+@keyframes anim2 {
+  0% {
+    color: var(--primary-color);
+    content: "confident";
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  50% {
+    color: var(--primary-color);
+    content: "confident";
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  100% {
+    color: var(--primary-color);
+    content: "confident";
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+@keyframes anim3 {
+  0% {
+    color: var(--primary-color);
+    content: "sophisticated";
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  50% {
+    color: var(--primary-color);
+    content: "sophisticated";
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  100% {
+    color: var(--primary-color);
+    content: "sophisticated";
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+@keyframes anim4 {
+  0% {
+    color: var(--primary-color);
+    content: "modern felines";
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  70% {
+    color: var(--branding-color);
+    content: "modern felines";
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 section h3 {
   font-family: "Cormorant Upright", serif;
   font-size: 60px;
