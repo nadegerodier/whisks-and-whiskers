@@ -245,33 +245,35 @@ section.hero #invisible-word {
 
 section.hero #rotating-word::after {
   animation: herowordchange 25s infinite;
-  content: "modern felines";
+  content: "modern";
+  display: inline-block;
   position: absolute;
 }
 
 section.hero #felines-word::after {
   animation: herolastword 25s infinite;
   content: "felines";
+  display: inline-block;
 }
 
 @keyframes herowordchange {
   0% {
     color: var(--branding-color);
-    content: "modern felines";
+    content: "modern";
     opacity: 1;
     transform: translateY(0px);
   }
 
   1% {
     color: var(--branding-color);
-    content: "modern felines";
+    content: "modern";
     opacity: 1;
     transform: translateY(0px);
   }
 
   6% {
     color: var(--branding-color);
-    content: "modern felines";
+    content: "modern";
     opacity: 0;
     transform: translateY(30px);
   }
@@ -372,26 +374,37 @@ section.hero #felines-word::after {
   0% {
     content: "felines";
     opacity: 1;
+    transform: translateY(0px);
   }
 
-  2% {
+  1% {
+    content: "felines";
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  6% {
     content: "felines";
     opacity: 0;
+    transform: translateY(30px);
   }
 
   55% {
     content: "felines";
     opacity: 0;
+    transform: translateY(0px);
   }
 
   72% {
     content: "felines";
     opacity: 1;
+    transform: translateY(0px);
   }
 
   100% {
     content: "felines";
     opacity: 1;
+    transform: translateY(0px);
   }
 }
 
