@@ -286,7 +286,14 @@ section.hero #felines-word::after {
     transform: translateY(0px);
   }
 
-  13% {
+  12% {
+    color: var(--primary-color);
+    content: "curious";
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  15% {
     color: var(--primary-color);
     content: "curious";
     opacity: 1;
@@ -307,7 +314,14 @@ section.hero #felines-word::after {
     transform: translateY(0px);
   }
 
-  27% {
+  26% {
+    color: var(--primary-color);
+    content: "confident";
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  29% {
     color: var(--primary-color);
     content: "confident";
     opacity: 1;
@@ -328,7 +342,14 @@ section.hero #felines-word::after {
     transform: translateY(0px);
   }
 
-  41% {
+  40% {
+    color: var(--primary-color);
+    content: "sophisticated";
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  43% {
     color: var(--primary-color);
     content: "sophisticated";
     opacity: 1;
